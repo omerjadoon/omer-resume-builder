@@ -1,0 +1,109 @@
+# ============================================================
+# ATS CV ARCHITECT - Resume Tailoring Template
+# ============================================================
+# HOW TO USE:
+#   1. Copy this file or paste its contents into the YAML editor
+#   2. Only fill in the fields you want to OVERRIDE from your base CV
+#   3. Fields left empty or removed will fall back to your default CV data
+#   4. Save a copy of this file with a job-specific name for each application
+#      e.g. assets/resume_google_ml_engineer.yaml
+# ============================================================
+
+# --- ROLE & HEADLINE ---
+# Slightly adjust your professional title to mirror the exact job posting title.
+# Example: "Senior ML Engineer" vs "Lead Machine Learning Scientist"
+target_role: "Machine Learning Engineer | Agentic AI Specialist"
+
+
+# --- PROFESSIONAL SUMMARY ---
+# Write 2-4 sentences. Lead with years of experience, then 2-3 key skills from
+# the job description, then a strong quantified achievement.
+# TIP: Mirror keywords EXACTLY as they appear in the job posting.
+summary: >
+  Results-driven Machine Learning Engineer with 5+ years of experience
+  in agentic AI systems, LLM orchestration, and MLOps. Proven track record
+  of designing and deploying state-of-the-art LLM pipelines and multi-agent
+  RAG systems that automate complex business processes and reduce operational
+  overhead by over 80%. Experienced in leading cross-functional AI teams in
+  fast-paced startup and enterprise environments.
+
+
+# --- SKILLS HIGHLIGHT ---
+# A custom comma-separated list of role-specific keywords to appear at the very
+# top of your Technical Skills section. Match these to the job description exactly.
+# This is the PRIMARY field that boosts ATS keyword scoring.
+skills_highlight: >
+  LangGraph, CrewAI, LlamaIndex, OpenAI API, Gemini, Claude (Anthropic),
+  Fine-tuning LLMs (LoRA / QLoRA), RAG Pipelines, Vector Embeddings,
+  Azure AI Studio, AWS SageMaker, MLOps, Docker, Kubernetes, Python, FastAPI
+
+
+# --- TAILORED EXPERIENCE BULLETS ---
+# Override bullet points for specific companies. Use the company ID keys below.
+# Any company you OMIT here will automatically use your standard resume bullets.
+#
+# Company ID Reference:
+#   sana_expert   → SanaExpert GmbH (Jan 2025 – Present)
+#   amidiro       → Amidiro GmbH (Dec 2023 – Dec 2024)
+#   remote_native → Remote Native GmbH (Apr 2023 – Oct 2023)
+#   ats           → Advance Telecom Services (Jul 2022 – Apr 2023)
+#   nrtc          → National Radio and Telecommunication Corporation
+#   jtpl          → Jadoon Technologies Private Limited
+#
+# WRITING TIPS FOR BULLETS:
+#   - Always start with a strong action verb (Built, Designed, Led, Automated...)
+#   - Quantify impact wherever possible (e.g., "reduced latency by 40%")
+#   - Mirror exact technical terms from the job description
+#   - 3-5 bullets per role is optimal for ATS and human readability
+
+tailored_bullets:
+
+  sana_expert:
+    - "Architected and deployed production-grade multi-agent AI system using LangGraph and LlamaIndex,
+      automating 85%+ of customer support tickets across 5 countries with full PII masking compliance."
+    - "Built a real-time agentic sales assistant (Purmeo) with audio + text I/O, integrating OpenAI
+      Whisper, TTS, and GPT-4o into a seamless conversational flow."
+    - "Fine-tuned FLUX.dev diffusion models with LoRA adapters to generate brand-consistent AI
+      influencer content at scale."
+    - "Developed an end-to-end AI Content Management System integrating n8n workflows for auto-posting
+      across Instagram, Facebook, TikTok, and Shopify."
+
+  amidiro:
+    - "Led development of Amidiro Audio Assistant using LLMs and real-time speech pipelines, improving
+      lead conversion by 20% and reducing average call handling time by 15%."
+    - "Engineered a YOLO v9 computer vision pipeline on the FireNet dataset, integrated with an LLM
+      report generator for automated Safety & Maintenance documentation."
+    - "Designed and shipped a WhatsApp-native social media content platform leveraging Meta Graph API,
+      TikTok API, and Gemini Flash for AI-assisted content generation."
+    - "Built internal RAG knowledge retrieval system from 50+ consulting research papers, cutting
+      consultant research time by 60%."
+
+  remote_native:
+    - "Synthesized 5M+ e-commerce records using LLMs to generate a custom training dataset for
+      fine-tuning a BERT-based Named Entity Recognition (NER) model."
+    - "Fine-tuned Meta's Segment Anything Model (SAM) for precision product background removal,
+      deployed with an interactive Streamlit interface."
+    - "Implemented a full MLOps pipeline on Azure Databricks covering ETL, model training,
+      evaluation, versioning, and automated retraining triggers."
+
+
+# --- CUSTOM PROJECTS ---
+# Add projects not in your base CV, or highlight work specifically relevant to this role.
+# Projects section only appears if this field is present and non-empty.
+# Each project needs a 'name' and 'description'. Keep description to 1-2 sentences.
+
+projects:
+  - name: "Agentic Resume Tailoring Engine"
+    description: >
+      Built a reactive, YAML-driven resume generator that dynamically merges base CV data
+      with job-tailored bullet points, generating ATS-optimized PDFs in real time.
+
+  - name: "Multi-Modal AI Customer Support System"
+    description: >
+      Designed and deployed an end-to-end agentic support system handling text, email, and
+      social media tickets in 5 languages using LangGraph, RAG, and PII masking.
+
+  - name: "Real-Time Audio Sales Agent"
+    description: >
+      Built an interactive voice agent with sub-second latency using OpenAI Whisper + TTS,
+      enabling fluid human-like sales conversations with product knowledge retrieval.

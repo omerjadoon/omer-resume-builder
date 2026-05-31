@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Agentic ATS Resume Architect</title>
+  <!-- Tailwind CSS via CDN for editor UI styling -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- JS-YAML via CDN for fast, robust parsing -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/js-yaml/4.1.0/js-yaml.min.js"></script>
+  <!-- HTML2PDF via CDN for instant direct PDF downloads -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+  <!-- Custom workspace CSS styles -->
+  <link rel="stylesheet" href="style.css">
+  <!-- SEO Optimization -->
+  <meta name="description" content="Premium real-time YAML-based ATS Resume Tailoring Generator built for high-scoring recruitment matching.">
+</head>
+<body>
+
+  <div class="app-container">
+    
+    <!-- Left Sidebar: Controls, YAML Editor & ATS Audit Checklist -->
+    <aside class="editor-panel">
+      
+      <!-- Title & Branding -->
+      <div class="editor-header">
+        <h1 class="editor-title" id="main-title">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="inline-block"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"></path><polyline points="14 2 14 8 20 8"></polyline></h1 >
+          <span>ATS CV Architect</span>
+        </h1>
+        <p class="editor-subtitle">Tailor your resume in seconds using structural YAML templates.</p>
+      </div>
+
+      <!-- Quick Actions Controls -->
+      <section class="control-card">
+        <h2 class="card-title">Configuration & Styling</h2>
+        
+        <div class="toggle-group">
+          <!-- Profile Pic Toggle -->
+          <div class="toggle-item">
+            <span class="text-slate-300 font-medium">Include Profile Picture</span>
+            <label class="switch">
+              <input type="checkbox" id="toggle-photo" checked>
+              <span class="slider"></span>
+            </label>
+          </div>
+          
+          <!-- Template selector -->
+          <div class="flex flex-col gap-1.5 mt-2">
+            <label class="text-xs font-semibold uppercase text-indigo-300">Layout Template</label>
+            <select id="template-select" class="w-full bg-slate-900 border border-slate-700 text-slate-200 rounded px-2 py-1.5 text-sm focus:outline-none focus:border-indigo-500">
+              <option value="template-executive">Executive Clean (Single Column)</option>
+              <option value="template-modern">Modern Indigo (Visual Accent)</option>
+              <option value="template-ats-strict">Strict ATS Standard (Times New Roman)</option>
+            </select>
+          </div>
+        </div>
+      </section>
+
+      <!-- Layout Parameter Sliders -->
+      <section class="control-card">
+        <h2 class="card-title">Document Fine-Tuning</h2>
+        
+        <!-- Margins slider -->
+        <div class="slider-container">
+          <label class="text-slate-300">Margins</label>
+          <input type="range" id="slider-margin" min="8" max="25" value="15">
+          <span class="badge" id="margin-val">15mm</span>
+        </div>
+        
+        <!-- Font Size slider -->
+        <div class="slider-container">
+          <label class="text-slate-300">Font Size</label>
+          <input type="range" id="slider-font" min="8" max="13" value="10" step="0.5">
+          <span class="badge" id="font-val">10pt</span>
+        </div>
+        
+        <!-- Line height slider -->
+        <div class="slider-container">
+          <label class="text-slate-300">Line Height</label>
+          <input type="range" id="slider-lineheight" min="1.1" max="1.8" value="1.4" step="0.05">
+          <span class="badge" id="lineheight-val">1.4</span>
+        </div>
+      </section>
+
+      <!-- The Real-time YAML Text Area Editor -->
+      <section class="yaml-container flex-grow">
+        <div class="flex items-center justify-between mb-1.5">
+          <label class="text-xs font-semibold uppercase text-indigo-300">Paste Customized YAML Content</label>
+          <button onclick="document.getElementById('yaml-editor').value = ''; document.getElementById('yaml-editor').focus();" class="text-[10px] text-slate-500 hover:text-indigo-400 font-medium">Clear Canvas</button>
+        </div>
+        <textarea id="yaml-editor" class="yaml-textarea" placeholder="# Paste your tailored resume YAML data here..."></textarea>
+        
+        <!-- Parsing Validation Bar -->
+        <div class="validation-bar" id="validation-status">
+          <span class="text-slate-400">Loading parser engine...</span>
+        </div>
+      </section>
+
+      <!-- Dynamic ATS Auditor -->
+      <section class="control-card mt-4 mb-0">
+        <h2 class="card-title">
+          <span>ATS Audit Compliance</span>
+          <span class="text-xs font-bold px-2 py-0.5 rounded-full bg-slate-900 border border-slate-700" id="ats-score">100%</span>
+        </h2>
+        <div id="ats-checklist" class="flex flex-col gap-2.5">
+          <!-- Dynamic checks injected here -->
+        </div>
+      </section>
+
+    </aside>
+
+    <!-- Right Area: Live Printable A4 Preview Container -->
+    <main class="preview-panel">
+      
+      <!-- Top floating command deck -->
+      <div class="action-overlay">
+        <button class="action-btn" id="btn-print">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 6 2 18 2 18 9"></polyline><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path><rect x="6" y="14" width="12" height="8"></rect></svg>
+          <span>Print / ATS PDF</span>
+        </button>
+        <button class="action-btn btn-secondary" id="btn-download-pdf">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+          <span>Direct Download PDF</span>
+        </button>
+      </div>
+
+      <!-- Printable Resume Paper Frame -->
+      <article class="resume-paper template-executive" id="resume-paper">
+        <!-- Live-compiled output injected by app.js -->
+        <div id="resume-content"></div>
+      </article>
+
+    </main>
+
+  </div>
+
+  <!-- Main script core logic -->
+  <script src="app.js"></script>
+</body>
+</html>
