@@ -166,92 +166,124 @@ projects:
     profileImage: "assets/zurerah.png",
     baseData: {
       name: "Zurerah Shahid",
-      title: "Lead UI/UX Architect | Senior Frontend Engineer",
+      title: "Data Analyst | Machine Learning Engineer",
       contact: {
-        phone: "+49 176 99887766",
-        email: "zurerah.shahid@gmail.com",
-        website: "zurerah.dev",
-        websiteUrl: "https://zurerah.dev",
-        linkedin: "linkedin.com/in/zurerahshahid",
-        linkedinUrl: "https://linkedin.com/in/zurerahshahid",
+        phone: "+49 176 26503018",
+        email: "zurerahs786@gmail.com",
+        website: "linkedin.com/in/zurerah-shahid",
+        websiteUrl: "https://linkedin.com/in/zurerah-shahid",
+        linkedin: "linkedin.com/in/zurerah-shahid",
+        linkedinUrl: "https://linkedin.com/in/zurerah-shahid",
         github: "github.com/zurerah",
         githubUrl: "https://github.com/zurerah",
-        location: "Munich, Germany"
+        location: "Erlangen, Germany"
       },
-      summary: "Passionate Lead UI/UX Architect and Frontend Developer with 5+ years of experience crafting premium digital products. Specializing in React, Next.js, and CSS design systems with a strong focus on web accessibility, performance, and responsive user experiences.",
+      summary: "Detail-oriented and analytical Data Analyst with 3+ years of hands-on experience in collecting, cleaning, and analyzing complex data sets. Proficient in statistical analysis, data visualization, and creating interactive dashboards to drive business insights and support decision-making.",
       skills: [
-        { category: "Design & Prototyping", items: "Figma, Sketch, Adobe XD, Wireframing, Interactive Prototyping, Design Systems, Typography" },
-        { category: "Frontend Core", items: "JavaScript (ES6+), TypeScript, HTML5, CSS3, SCSS, Responsive Web Design" },
-        { category: "Frameworks & Libraries", items: "React.js, Next.js, Vue.js, Angular, Redux, Context API, Tailwind CSS, styled-components" },
-        { category: "Testing & Performance", items: "Jest, React Testing Library, Cypress, Webpack, Lighthouse, Web Vitals Optimization" },
-        { category: "Accessibility & Standards", items: "WCAG 2.1 Compliance, Semantic HTML, WAI-ARIA, Screen Readers Testing" },
-        { category: "Workflow & Tools", items: "Git, GitHub, npm/yarn, Vite, Jira, Confluence, Agile/Scrum" }
+        { category: "Programming Languages", items: "Python, R, C++, Java" },
+        { category: "Data Visualization", items: "Power BI, Tableau" },
+        { category: "Machine Learning & Gen AI", items: "Prompt Engineering, LLMs, RAG, scikit-learn, Causal Discovery, causal-learn" },
+        { category: "Statistical Analysis", items: "Hypothesis Testing, Regression Analysis" },
+        { category: "Database Management", items: "SQL, KQL, PostgreSQL, MySQL" },
+        { category: "Data Science Libraries", items: "Pandas, NumPy, TensorFlow, Matplotlib, Seaborn" },
+        { category: "Tools & Platforms", items: "Jupyter Notebook, Colab, Anaconda" }
       ],
       experience: [
         {
-          company: "Creative Digital Agency",
-          role: "Senior Frontend Developer & UI Architect",
+          company: "Siemens Healthineers",
+          role: "Data Analyst and AI/ML Practitioner",
           date: "Jan 2024 – Present",
-          location: "Munich, Germany",
-          id: "creative_agency",
+          location: "Hybrid, Germany",
+          id: "siemens",
           bullets: [
-            "Architected and built standard React/Next.js design systems used across 12 product lines, reducing design-to-development time by 40%.",
-            "Improved web application accessibility (WCAG 2.1 AA compliance), widening the user reach by 15%.",
-            "Optimized frontend performance, achieving Lighthouse scores above 95/100 and reducing page load times by 1.8 seconds.",
-            "Mentored and guided a team of 4 junior developers on CSS architecture and React state management best practices."
+            "Built dynamic Power BI dashboards for internal analytics and reporting on system performance and utilization metrics.",
+            "Developed regression models to forecast power consumption across distributed medical systems.",
+            "Engaged in requirement gathering and technical discussions with stakeholders and clients to ensure delivery alignment.",
+            "Conducted internal trainings and knowledge-sharing sessions on data tools, modeling practices, and dashboard usage.",
+            "Supported data preprocessing, feature engineering, and statistical testing in ongoing AI/ML initiatives."
           ]
         },
         {
-          company: "TechVantage Solutions",
-          role: "UI/UX Engineer",
-          date: "Sep 2021 – Dec 2023",
-          location: "Berlin, Germany",
-          id: "techvantage",
+          company: "Global Logistics Alliance",
+          role: "Data Analyst",
+          date: "Jul 2021 – Dec 2022",
+          location: "On-site, China",
+          id: "gla",
           bullets: [
-            "Designed and developed high-fidelity interactive prototypes in Figma for complex enterprise SaaS applications.",
-            "Implemented modular and reusable React component libraries, decreasing code duplication across projects by 30%.",
-            "Collaborated closely with product managers and backend teams to integrate RESTful APIs seamlessly into client dashboards."
+            "Performed data cleaning, preprocessing, and exploratory data analysis (EDA).",
+            "Applied statistical techniques including hypothesis testing and regression analysis.",
+            "Developed interactive dashboards using Python, R, Tableau, and Power BI."
           ]
         }
       ],
       education: [
         {
-          institution: "Technical University of Munich",
-          degree: "Master of Science in Informatics (Human-Computer Interaction)",
-          date: "OCT 2019 - OCT 2021",
-          location: "Munich, Germany",
-          highlights: "Thesis on Accessible UI Design Systems | DAAD Scholarship Recipient"
+          institution: "Friedrich-Alexander-Universität Erlangen-Nürnberg",
+          degree: "Master's in Artificial Intelligence",
+          date: "APR 2023 – Present",
+          location: "Erlangen, Germany",
+          highlights: "Focus: Big Data Analytics, Human-Computer Interaction, Business Intelligence | 2nd Semester"
+        },
+        {
+          institution: "Southwest Forestry University, Kunming",
+          degree: "BSc in Computer Science & Engineering",
+          date: "MAR 2018 – DEC 2021",
+          location: "Kunming, China",
+          highlights: "Focus: Data Science, Databases, Machine Learning | CSC Provincial Scholarship – Government of China"
         }
       ],
       awards: [
-        { title: "Best Design System Contributor", detail: "Awarded by Creative Digital Agency for cross-product components", date: "Nov 2024" }
+        { title: "CSC Provincial Scholarship", detail: "Government of China scholarship for academic excellence", date: "Mar 2018" },
+        { title: "PM Laptop Scheme", detail: "Received Laptop – PM Laptop Scheme, Pakistan", date: "Jul 2016" }
       ],
       languages: [
-        { name: "English", level: "C2 — Native / Bilingual" },
-        { name: "German", level: "B2 — Upper-Intermediate" }
+        { name: "English", level: "Professional Working Proficiency" },
+        { name: "German", level: "Beginner (Learning)" },
+        { name: "Urdu", level: "Native" },
+        { name: "Chinese", level: "Elementary" }
+      ],
+      projects: [
+        {
+          name: "Power Consumption Forecasting System (Siemens Healthineers)",
+          description: "Designed and trained multiple regression models to predict medical device power usage patterns. Improved forecast accuracy by 22% using multivariate analysis and historical telemetry data, enabling proactive load and energy management."
+        },
+        {
+          name: "Interactive Healthcare Analytics Dashboard (Siemens Healthineers)",
+          description: "Developed a suite of Power BI dashboards to track equipment status, performance KPIs, and maintenance logs. Integrated real-time datasets via APIs and SQL, reducing manual reporting efforts by 60%."
+        },
+        {
+          name: "Logistics Insights Platform (GLA)",
+          description: "Performed end-to-end EDA and dashboarding for shipment tracking and warehouse performance. Recommended data-driven optimizations that improved delivery SLAs by 12%."
+        },
+        {
+          name: "HTV-Based Delivery App with Fleet Analysis (Quick Moove)",
+          description: "Built an Android app prototype for managing heavy transport vehicle deliveries with backend analytics for route efficiency, fuel usage, and driver performance using linear regression and seasonal decomposition."
+        }
       ]
     },
     defaultYaml: `# Zurerah's Job-Tailored Customizations
 # Only paste/edit fields you want to override.
 
-target_role: "Lead UI/UX Architect & Design System Specialist"
+target_role: "Data Analyst | Machine Learning Engineer"
 
-summary: "Highly skilled UI/UX Architect and Frontend Engineer with 5+ years of experience building accessible, high-performance design systems and user interfaces. Proven track record of leveraging React, Next.js, and semantic CSS to reduce design-to-development friction by 40% and boost digital product reach."
+summary: "Detail-oriented Data Analyst and ML Engineer with 3+ years of experience at Siemens Healthineers and Global Logistics Alliance. Expert in Power BI dashboards, regression modeling, and statistical analysis, delivering measurable business impact including 22% forecast accuracy improvement and 60% reduction in manual reporting."
 
-skills_highlight: "Figma design tokens, Web Accessibility (WCAG 2.1), Next.js, Tailwind CSS, Jest, styled-components, Lighthouse optimization."
+skills_highlight: "Power BI, Tableau, Python, scikit-learn, SQL, KQL, PostgreSQL, Pandas, NumPy, LLMs, RAG, Hypothesis Testing, Regression Analysis."
 
 tailored_bullets:
-  creative_agency:
-    - "Led the engineering of a cross-company design system with React, reducing time-to-market for new features by 40%."
-    - "Achieved 100% WCAG compliance on core SaaS platforms, directly scaling enterprise customer onboarding."
-    - "Drove performance tuning, raising core web vitals and trimming loading times by 1.8 seconds."
-  techvantage:
-    - "Converted complex designer wireframes into production-ready React component libraries."
-    - "Coordinated with APIs to render high-density charts and client analytics pipelines."
+  siemens:
+    - "Engineered Power BI dashboards tracking real-time system performance KPIs across distributed medical device networks."
+    - "Built and validated regression models forecasting power consumption, improving prediction accuracy by 22%."
+    - "Led stakeholder workshops and internal data literacy trainings, upskilling cross-functional teams on BI tooling."
+  gla:
+    - "Executed end-to-end EDA pipelines on large-scale logistics datasets, surfacing actionable delivery insights."
+    - "Built multi-tool dashboards in Tableau and Power BI, improving SLA compliance visibility by 12%."
 
 projects:
-  - name: "Interactive Design System Token Engine"
-    description: "Built an open-source tool that translates Figma design tokens into production-ready Tailwind, SCSS, and CSS Custom Properties."
+  - name: "Power Consumption Forecasting System"
+    description: "Multivariate regression pipeline predicting medical device power usage, achieving 22% accuracy improvement over baseline at Siemens Healthineers."
+  - name: "Healthcare Analytics Dashboard"
+    description: "Suite of Power BI dashboards integrating real-time SQL data, reducing manual reporting by 60% across support and engineering teams."
 `
   },
   mohsin: {
@@ -520,17 +552,21 @@ document.addEventListener("DOMContentLoaded", () => {
     });
     html += `</div>`;
 
-    // 5. Custom Projects (if any defined in YAML)
-    if (customData.projects && Array.isArray(customData.projects)) {
+    // 5. Projects — merge base CV projects + any YAML-defined overrides
+    const baseProjects = (activeBaseCV.projects && Array.isArray(activeBaseCV.projects)) ? activeBaseCV.projects : [];
+    const yamlProjects = (customData.projects && Array.isArray(customData.projects)) ? customData.projects : [];
+    const allProjects = [...yamlProjects, ...baseProjects.filter(bp => !yamlProjects.find(yp => yp.name === bp.name))];
+
+    if (allProjects.length > 0) {
       html += `
         <div class="resume-section">
-          <div class="section-title">Projects</div>
+          <div class="section-title">Notable Projects</div>
       `;
-      customData.projects.forEach(proj => {
+      allProjects.forEach(proj => {
         html += `
           <div class="project-item">
             <span class="project-title">${proj.name}:</span>
-            <span class="resume-summary">${proj.description}</span>
+            <span class="resume-summary"> ${proj.description}</span>
           </div>
         `;
       });
