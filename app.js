@@ -18,14 +18,14 @@ const BASE_CV_DATA = {
   summary: "Results-driven Machine Learning Engineer with 5+ years of experience in artificial intelligence, data science, machine learning, NLP and MLOps. Proficient in Python, ML/DL, LLM Frameworks and Cloud Deployments.",
   skills: [
     { category: "Programming Languages", items: "Python, JavaScript, TypeScript, C / C++, Java, C#" },
-    { category: "Frameworks & Tools", items: "TensorFlow, PyTorch, LangChain, LlamaIndex, Streamlit, Flask, Django" },
+    { category: "Frameworks & Tools", items: "TensorFlow, PyTorch, LangChain, LlamaIndex, Streamlit, Flask, Django, FiftyOne" },
     { category: "Generative AI Technologies", items: "Agentic AI, LLMs (Llama3, Mistral, OpenAI, Gemini, Claude), Multimodal LLMs, Audio-to-Audio Models, Video Language Models (VLMs), Diffusion Models, GANs, CrewAI, LangGraph, DeepEval, LangSmith" },
-    { category: "Databases", items: "Cosmos DB (production), MySQL, MongoDB, PostgreSQL, Firebase, SQL, Vector DBs (ChromaDB, Pinecone)" },
-    { category: "Deployment Platforms", items: "Azure AI, AWS (EC2, Lambda), Azure Functions, Hugging Face Spaces, MLOps, Docker, Kubernetes, GitHub, GitLab, Terraform, AWS EKS, LLMOps" },
+    { category: "Databases", items: "Cosmos DB (production), MySQL, MongoDB, PostgreSQL, Firebase, SQL, Vector DBs (ChromaDB, Pinecone), MinIO Object Store" },
+    { category: "Deployment Platforms", items: "Azure AI, AWS (EC2, Lambda), Azure Functions, Hugging Face Spaces, MLOps (MLflow, Airflow, Meltano), Docker, Kubernetes, GitHub, GitLab, Terraform, AWS EKS, LLMOps" },
     { category: "AI Techniques", items: "Fine-tuning, RAG, Vector Embeddings, Neural Network Optimization, Prompt Engineering, Knowledge Graphs, LLM & RAG Evaluation" },
     { category: "Traditional AI", items: "Computer Vision, NLP, Machine Learning, Deep Learning, DNN" },
     { category: "Web Development & AI", items: "Next.js, Flask, Django, React.js, FastAPI, Make, n8n, Flowise, REST APIs, GraphQL" },
-    { category: "Management & Monitoring", items: "Notion, Jira, Confluence, Agile Development, Grafana Dashboards, Prometheus" },
+    { category: "Management & Monitoring", items: "Notion, Jira, Confluence, Agile Development, Grafana Dashboards, Prometheus, Metabase" },
     { category: "Soft Skills", items: "Analytical Thinking, Problem-Solving, Teamwork, Communication, Leadership, Cross-functional Collaboration" }
   ],
   experience: [
@@ -144,7 +144,7 @@ target_role: "Machine Learning Engineer | Agentic AI Specialist"
 
 summary: "Results-driven Machine Learning Engineer with 5+ years of experience in artificial intelligence, LLM frameworks, MLOps, and agentic workflows. Proven track record of designing and deploying state-of-the-art LLM pipelines and RAG systems that automate complex business processes and increase efficiency by 80%."
 
-skills_highlight: "LangGraph, CrewAI, LlamaIndex, fine-tuning LLaMA, vector embeddings, cloud deployments (Azure/AWS), MLOps pipelines."
+skills_highlight: "LangGraph, CrewAI, LlamaIndex, fine-tuning LLaMA, vector embeddings, MLOps (MLflow, Airflow, Meltano), MinIO, FiftyOne, Metabase."
 
 tailored_bullets:
   sana_expert:

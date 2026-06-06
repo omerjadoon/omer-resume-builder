@@ -35,7 +35,7 @@ summary: >
 skills_highlight: >
   LangGraph, CrewAI, LlamaIndex, OpenAI API, Gemini, Claude (Anthropic),
   Fine-tuning LLMs (LoRA / QLoRA), RAG Pipelines, Vector Embeddings,
-  Azure AI Studio, AWS SageMaker, MLOps, Docker, Kubernetes, Python, FastAPI
+  Azure AI Studio, AWS SageMaker, MLOps (MLflow, Airflow, Meltano), MinIO Object Store, FiftyOne, Metabase, Docker, Kubernetes, Python, FastAPI
 
 
 # --- TAILORED EXPERIENCE BULLETS ---
