@@ -15,7 +15,30 @@
   <!-- SEO Optimization -->
   <meta name="description" content="Premium real-time YAML-based ATS Resume Tailoring Generator built for high-scoring recruitment matching.">
 </head>
-<body>
+<body class="logged-out">
+
+  <!-- Glassmorphic Login Overlay -->
+  <div class="login-screen" id="login-screen">
+    <div class="login-card">
+      <div class="login-logo">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"></path><polyline points="14 2 14 8 20 8"></polyline></svg>
+      </div>
+      <h2 class="login-title">ATS CV Architect</h2>
+      <p class="login-desc">Sign in to design and tailor structural ATS-optimized resumes.</p>
+      
+      <form id="login-form" onsubmit="return false;">
+        <div class="login-group">
+          <label for="username" class="login-label">Username</label>
+          <input type="text" id="username" class="login-input" placeholder="Enter your username" autocomplete="username" required>
+          <div class="login-error" id="login-error"></div>
+        </div>
+        <button type="submit" id="btn-next" class="login-btn">
+          <span>Next</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+        </button>
+      </form>
+    </div>
+  </div>
 
   <div class="app-container">
     
@@ -24,10 +47,19 @@
       
       <!-- Title & Branding -->
       <div class="editor-header">
-        <h1 class="editor-title" id="main-title">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="inline-block"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"></path><polyline points="14 2 14 8 20 8"></polyline></h1 >
-          <span>ATS CV Architect</span>
-        </h1>
+        <div class="header-row">
+          <h1 class="editor-title" id="main-title">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="inline-block"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"></path><polyline points="14 2 14 8 20 8"></polyline></svg>
+            <span>ATS CV Architect</span>
+          </h1>
+          <div class="flex items-center gap-2">
+            <span class="role-badge" id="role-badge">User</span>
+            <button class="logout-btn" id="btn-logout" title="Sign out">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path><polyline points="16 17 21 12 16 7"></polyline><line x1="21" y1="12" x2="9" y2="12"></line></svg>
+              <span>Sign out</span>
+            </button>
+          </div>
+        </div>
         <p class="editor-subtitle">Tailor your resume in seconds using structural YAML templates.</p>
       </div>
 
@@ -94,6 +126,42 @@
         <!-- Parsing Validation Bar -->
         <div class="validation-bar" id="validation-status">
           <span class="text-slate-400">Loading parser engine...</span>
+        </div>
+      </section>
+
+      <!-- Superadmin Panel Console -->
+      <section class="control-card mt-4" id="superadmin-console" style="display: none;">
+        <h2 class="card-title">
+          <span>Superadmin Admin Console</span>
+        </h2>
+        <div class="superadmin-console">
+          <!-- Dynamic Theme Color picker -->
+          <div class="admin-color-picker mb-2">
+            <span class="text-slate-300 font-medium">Accent Color:</span>
+            <input type="color" id="admin-theme-color" class="admin-color-input" value="#6366f1">
+          </div>
+          
+          <!-- Interactive ATS Audit Toggles -->
+          <div class="admin-input-group mb-2">
+            <label>Enabled Audit Rules</label>
+            <div class="admin-rules-grid" id="admin-rules-container">
+              <!-- Dynamically rendered checklist of rules -->
+            </div>
+          </div>
+
+          <!-- Edit Active Base Data (JSON) -->
+          <div class="admin-input-group mb-2">
+            <label for="admin-base-cv-editor">Live Base CV Editor (JSON)</label>
+            <textarea id="admin-base-cv-editor" class="admin-textarea" placeholder="{...}"></textarea>
+          </div>
+
+          <!-- Mock System Logs -->
+          <div class="admin-input-group">
+            <label>System Session Logs</label>
+            <div class="admin-logs" id="admin-logs-content">
+              <!-- Dynamic log entries -->
+            </div>
+          </div>
         </div>
       </section>
 
