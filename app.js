@@ -17,15 +17,13 @@ const BASE_CV_DATA = {
   },
   summary: "Results-driven Machine Learning Engineer with 5+ years of experience in artificial intelligence, data science, machine learning, NLP and MLOps. Proficient in Python, ML/DL, LLM Frameworks and Cloud Deployments.",
   skills: [
-    { category: "Programming Languages", items: "Python, JavaScript, TypeScript, C / C++, Java, C#" },
-    { category: "Frameworks & Tools", items: "TensorFlow, PyTorch, LangChain, LlamaIndex, Streamlit, Flask, Django, FiftyOne" },
-    { category: "Generative AI Technologies", items: "Agentic AI, LLMs (Llama3, Mistral, OpenAI, Gemini, Claude), Multimodal LLMs, Audio-to-Audio Models, Video Language Models (VLMs), Diffusion Models, GANs, CrewAI, LangGraph, DeepEval, LangSmith" },
-    { category: "Databases", items: "Cosmos DB (production), MySQL, MongoDB, PostgreSQL, Firebase, SQL, Vector DBs (ChromaDB, Pinecone), MinIO Object Store" },
-    { category: "Deployment Platforms", items: "Azure AI, AWS (EC2, Lambda), Azure Functions, Hugging Face Spaces, MLOps (MLflow, Airflow, Meltano), Docker, Kubernetes, GitHub, GitLab, Terraform, AWS EKS, LLMOps" },
-    { category: "AI Techniques", items: "Fine-tuning, RAG, Vector Embeddings, Neural Network Optimization, Prompt Engineering, Knowledge Graphs, LLM & RAG Evaluation" },
-    { category: "Traditional AI", items: "Computer Vision, NLP, Machine Learning, Deep Learning, DNN" },
-    { category: "Web Development & AI", items: "Next.js, Flask, Django, React.js, FastAPI, Make, n8n, Flowise, REST APIs, GraphQL" },
-    { category: "Management & Monitoring", items: "Notion, Jira, Confluence, Agile Development, Grafana Dashboards, Prometheus, Metabase" },
+    { category: "Programming Languages", items: "Python, JavaScript, TypeScript, SQL, C / C++, Java, C#" },
+    { category: "Generative AI & LLM Orchestration", items: "Agentic AI, LangGraph, CrewAI, LangChain, LlamaIndex, LLMs (Llama, Mistral, GPT-4, Claude, Gemini), Multimodal LLMs, Audio/Video Models, RAG Pipelines, Vector Embeddings, Fine-Tuning (LoRA/QLoRA), Prompt Engineering, Knowledge Graphs, LLM Evaluation (DeepEval, LangSmith)" },
+    { category: "Machine Learning & Computer Vision", items: "TensorFlow, PyTorch, Computer Vision, NLP, Deep Learning (DNN), GANs, FiftyOne, Neural Network Optimization" },
+    { category: "Data Engineering & Databases", items: "PostgreSQL, MySQL, MongoDB, Cosmos DB (production), Firebase, Vector Databases (ChromaDB, Pinecone), MinIO Object Store, ETL/ELT Pipelines" },
+    { category: "MLOps & Cloud Infrastructure", items: "MLflow, Apache Airflow, Meltano, Docker, Kubernetes, AWS EKS, AWS (EC2, Lambda, S3), Azure AI, Azure Functions, Hugging Face Spaces, Terraform, LLMOps" },
+    { category: "Web Development & AI Integration", items: "Next.js, React.js, Node.js, FastAPI, Django, Flask, Streamlit, REST APIs, GraphQL, n8n, Make, Flowise" },
+    { category: "Observability & Project Management", items: "Grafana, Prometheus, Metabase, Git, GitHub, GitLab, Jira, Confluence, Notion, Agile Development" },
     { category: "Soft Skills", items: "Analytical Thinking, Problem-Solving, Teamwork, Communication, Leadership, Cross-functional Collaboration" }
   ],
   experience: [
