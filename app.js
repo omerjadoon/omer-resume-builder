@@ -19,7 +19,7 @@ const USER_PROFILES = {
         githubUrl: "https://github.com/omerjadoon",
         location: "Munich, Germany"
       },
-      summary: "Results-driven Machine Learning Engineer with 5+ years of experience in artificial intelligence, data science, machine learning, NLP and MLOps. Proficient in Python, ML/DL, LLM Frameworks and Cloud Deployments.",
+      summary: "Results-driven Machine Learning Engineer with 3+ years of experience in artificial intelligence, data science, machine learning, NLP and MLOps. Proficient in Python, ML/DL, LLM Frameworks and Cloud Deployments.",
       skills: [
         { category: "Programming Languages", items: "Python, JavaScript, TypeScript, SQL, C / C++, Java, C#" },
         { category: "Generative AI & LLM Orchestration", items: "Agentic AI, LangGraph, CrewAI, LangChain, LlamaIndex, LLMs (Llama, Mistral, GPT-4, Claude, Gemini), Multimodal LLMs, Audio/Video Models, RAG Pipelines, Vector Embeddings, Fine-Tuning (LoRA/QLoRA), Prompt Engineering, Knowledge Graphs, LLM Evaluation (DeepEval, LangSmith)" },
@@ -35,86 +35,70 @@ const USER_PROFILES = {
           company: "SanaExpert GmbH",
           role: "Artificial Intelligence Specialist",
           date: "Jan 2025 – Present",
-          location: "Munich, Germany",
+          location: "Munich, Germany · Hybrid",
           id: "sana_expert",
           bullets: [
-            "Automation of more than 85% of Customer Support tickets using AI across different countries (Germany, Spain, Italy, Portugal and China) and across different channels (shopify web chat, email, instagram, messenger etc.)",
-            "Designed and deployed production-grade agentic AI system with advanced RAG and knowledge graphs, tool calling, and context management, handling sensitive user data with PII masking",
-            "Modern Interactive Sales Agent for Purmeo with text + audio input/output support",
-            "VLMs, Fine tuning FLUX.dev models (LoRa) for SanaExpert AI Influencer",
-            "Finetune BioGPT on text based data for medical QA bot",
-            "AI based Content Generation and Management System with auto posting on all social media channels"
+            "Automated over 85% of customer support tickets across multiple countries and communication channels using AI-driven workflows.",
+            "Designed and deployed a production-grade agentic AI system powered by advanced RAG, knowledge graphs, and contextual reasoning.",
+            "Developed a modern interactive AI sales agent for Purmeo, integrating text and audio input/output to support real-time customer engagement."
           ]
         },
         {
-          company: "Amidiro GmbH",
-          role: "Generative AI & Machine Learning Consultant",
-          date: "Dec 2023 – Dec 2024",
-          location: "Aachen, Germany",
+          company: "Siemens",
+          role: "Master Thesis Project",
+          date: "Jun 2025 – Dec 2025",
+          location: "Amberg, Germany · Hybrid",
+          id: "siemens_thesis",
+          bullets: [
+            "Master's Thesis: Development of an Anomaly Detection Algorithm for Classifying the Unknown-Unknown Paradigm."
+          ]
+        },
+        {
+          company: "amidiro",
+          role: "Generative AI & Machine Learning Engineer",
+          date: "Dec 2023 – Nov 2024",
+          location: "Aachen, Germany · Hybrid",
           id: "amidiro",
           bullets: [
-            "Lead the Development of Amidiro Audio Assistant which helps businesses/hospitals to provide support and do marketing and support calls using LLMs and which increase the lead conversion rate by 20%, and reduce the call handling time by 15%",
-            "Fine tuned YOLO v9 on FireNet Dataset and Developed a pipeline to generate Safety & Maintenance Report using LLM",
-            "Developed a data pipeline to extract important information from Company register (Handelsregister) using OpenAI ChatGPT and store it to AWS DynamoDB",
-            "Build a Retrieval-augmented generation (RAG) pipeline for Amidiro Internal Knowledgebase to help consultants",
-            "Developed Basic and Advance Training about Prompt Engineering and RAG focusing on latest research",
-            "Knowledge retrieval from recent Research Papers and integration into the Knowledgebase",
-            "Whatsapp based social media content management platform using meta, tiktok APIs and Gemini Flash"
+            "Led the development of AI-powered audio assistant, RAG, and knowledge retrieval systems using LLMs, speech models, and OpenAI-based pipelines for customer support, research, and internal knowledge access.",
+            "Built AI automation workflows including YOLOv9 safety reporting, Handelsregister data extraction to AWS DynamoDB, and audio agent calling pipelines, improving lead conversion by 20% and reducing call handling time by 15%.",
+            "Designed and delivered training programs on Prompt Engineering, RAG, and LLM fine-tuning, helping teams apply advanced AI techniques in real business workflows."
           ]
         },
         {
           company: "Remote Native GmbH",
           role: "Machine Learning Engineer",
           date: "Apr 2023 – Oct 2023",
-          location: "Munich, Germany",
+          location: "Munich, Germany · Remote",
           id: "remote_native",
           bullets: [
-            "Generated Synthetic dataset using LLMs from ~5 Million e-commerce dataset, to train custom BERT model for Named Entity Relations (NER) task",
-            "Fine Tuned Segment Anything model to do image segmentation and remove background from images. Also created an interface for this in streamlit",
-            "Developed a Restful API service for converting video of Product to 3D objects",
-            "Implemented MLOps pipeline in Azure Databricks to Extract Transform Load (ETL), Model Training and Deployment"
+            "Built advanced AI solutions across LLMs, BERT-based NER, computer vision, and generative product experiences, including synthetic dataset generation from ~5M e-commerce records.",
+            "Fine-tuned SAM for segmentation/background removal, developed Streamlit interfaces, image analysis workflows, video-to-3D REST APIs, and virtual try-on features.",
+            "Built scalable Azure Databricks MLOps pipelines for ETL, model training, deployment, and production-ready AI workflows."
           ]
         },
         {
-          company: "Advance Telecom Services (ATS)",
-          role: "Artificial Intelligence Engineer",
-          date: "Jul 2022 – Apr 2023",
-          location: "Remote, USA",
-          id: "ats",
+          company: "Jadoon Technologies",
+          role: "Senior Full Stack Software Engineer",
+          date: "Nov 2021 – Dec 2022",
+          location: "Pakistan · Hybrid",
+          id: "jtpl_senior",
           bullets: [
-            "Set up fine-tuning and evaluation pipelines on Microsoft Azure",
-            "Trained Custom Computer Vision and NLP Models and Deployed them on Azure Cloud",
-            "Implemented an Advanced Recommendation System for car dealership stores",
-            "Developed Generative AI Training and conducted training sessions with universities",
-            "Worked on Data Pipelines, ETL, Batch Scoring, Stream Processing, Visualization using Power BI"
+            "Led the development of scalable full-stack applications using advanced Python, JavaScript, TypeScript, React.js, and Next.js, owning complex backend, frontend, and integration features.",
+            "Designed robust APIs, automation workflows, ETL pipelines, and reusable architectures to improve performance, reliability, and maintainability.",
+            "Led a team of 8 engineers, guiding code reviews, technical planning, debugging, deployments, and high-quality project delivery."
           ]
         },
         {
-          company: "National Radio and Telecommunication Corporation (NRTC)",
-          role: "Assistant Manager Artificial Intelligence Lab",
-          date: "Oct 2021 – June 2022",
-          location: "Onsite, Pakistan",
-          id: "nrtc",
-          bullets: [
-            "Build the AI and BigData Lab with a private cloud for KPK Police, Pakistan",
-            "Worked on Development of OSINT for Social Media and Criminals Analysis",
-            "Trained an AI based Forecasting AI to forecast any possible crime in an area",
-            "Build Interactive Dashboards in Qlik Sense and a custom ETL system for Telecommunication Data",
-            "Developed Link Analysis Platform to analyze the activities of Terrorist Groups in Pakistan",
-            "Development of Facial Recognition System (FRS), Automatic Number Plate Recognition System",
-            "Lead a team of 5 People"
-          ]
-        },
-        {
-          company: "Jadoon Technologies Private Limited (JTPL)",
-          role: "Lead Software Engineer",
+          company: "Jadoon Technologies",
+          role: "Associate Software Engineer",
           date: "Nov 2020 – Oct 2021",
-          location: "Onsite, Pakistan",
-          id: "jtpl",
+          location: "Pakistan · Hybrid",
+          id: "jtpl_associate",
           bullets: [
-            "Developed Cross Platform Mobile and web apps using Next JS, React JS, ASP.NET as well as Django",
-            "Web Scraping, Data Analytics, Exploratory Data Analysis",
-            "Data Ingestion, Training ML and DL based models for visual analysis, emotion detection, and road safety"
+            "Developed full-stack web applications using Python, JavaScript, TypeScript, React.js, and Next.js, contributing to both frontend and backend features.",
+            "Assisted in building REST APIs, database integrations, reusable UI components, and ETL pipelines for data extraction, transformation, and reporting.",
+            "Supported debugging, testing, web scraping, documentation, and deployment activities while collaborating with senior engineers."
           ]
         }
       ],
@@ -139,10 +123,18 @@ const USER_PROFILES = {
     },
     defaultYaml: `# Tailor Your Resume Here to Match the Job Description!
 # Only paste the fields you want to override.
+#
+# Company ID Reference:
+#   sana_expert     → SanaExpert GmbH (Jan 2025 – Present)
+#   siemens_thesis  → Siemens Master Thesis (Jun 2025 – Dec 2025)
+#   amidiro         → amidiro (Dec 2023 – Nov 2024)
+#   remote_native   → Remote Native GmbH (Apr 2023 – Oct 2023)
+#   jtpl_senior     → Jadoon Technologies – Senior Full Stack (Nov 2021 – Dec 2022)
+#   jtpl_associate  → Jadoon Technologies – Associate (Nov 2020 – Oct 2021)
 
 target_role: "Machine Learning Engineer | Agentic AI Specialist"
 
-summary: "Results-driven Machine Learning Engineer with 5+ years of experience in artificial intelligence, LLM frameworks, MLOps, and agentic workflows. Proven track record of designing and deploying state-of-the-art LLM pipelines and RAG systems that automate complex business processes and increase efficiency by 80%."
+summary: "Results-driven Machine Learning Engineer with 3+ years of experience in artificial intelligence, LLM frameworks, MLOps, and agentic workflows. Proven track record of designing and deploying state-of-the-art LLM pipelines and RAG systems that automate complex business processes and increase efficiency by 80%."
 
 skills_highlight: "LangGraph, CrewAI, LlamaIndex, fine-tuning LLaMA, vector embeddings, MLOps (MLflow, Airflow, Meltano), MinIO, FiftyOne, Metabase."
 
@@ -150,11 +142,15 @@ tailored_bullets:
   sana_expert:
     - "Automated more than 85% of customer support tickets across Europe and Asia using agentic AI, dramatically lowering resolution times."
     - "Architected and deployed production-grade Multi-Agent workflows using LangGraph and advanced context retention techniques."
-    - "Finetuned vision models and BioGPT for custom biomedical and generative marketing tasks."
+    - "Developed a real-time interactive AI sales agent (Purmeo) with audio + text I/O for seamless customer engagement."
   amidiro:
-    - "Designed and launched Amidiro Audio Assistant with highly responsive audio LLM integrations, improving lead conversion by 20%."
-    - "Engineered YOLO-based computer vision workflows coupled with generative report writer systems."
-    - "Deployed secure knowledge search structures over massive internal consulting databases."
+    - "Led development of AI-powered audio assistant and RAG knowledge retrieval systems using LLMs and speech models."
+    - "Built YOLOv9 safety reporting workflows and Handelsregister data extraction pipelines to AWS DynamoDB."
+    - "Delivered advanced training programs on Prompt Engineering, RAG, and LLM fine-tuning to cross-functional teams."
+  remote_native:
+    - "Synthesized 5M+ e-commerce records using LLMs to generate a custom training dataset for fine-tuning BERT-based NER."
+    - "Fine-tuned Meta SAM for product background removal, deployed with an interactive Streamlit interface."
+    - "Implemented a full MLOps pipeline on Azure Databricks covering ETL, model training, evaluation, and deployment."
 
 projects:
   - name: "Autonomous Agentic Resume Builder"

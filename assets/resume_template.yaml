@@ -20,7 +20,7 @@ target_role: "Machine Learning Engineer | Agentic AI Specialist"
 # the job description, then a strong quantified achievement.
 # TIP: Mirror keywords EXACTLY as they appear in the job posting.
 summary: >
-  Results-driven Machine Learning Engineer with 5+ years of experience
+  Results-driven Machine Learning Engineer with 3+ years of experience
   in agentic AI systems, LLM orchestration, and MLOps. Proven track record
   of designing and deploying state-of-the-art LLM pipelines and multi-agent
   RAG systems that automate complex business processes and reduce operational
@@ -43,12 +43,12 @@ skills_highlight: >
 # Any company you OMIT here will automatically use your standard resume bullets.
 #
 # Company ID Reference:
-#   sana_expert   → SanaExpert GmbH (Jan 2025 – Present)
-#   amidiro       → Amidiro GmbH (Dec 2023 – Dec 2024)
-#   remote_native → Remote Native GmbH (Apr 2023 – Oct 2023)
-#   ats           → Advance Telecom Services (Jul 2022 – Apr 2023)
-#   nrtc          → National Radio and Telecommunication Corporation
-#   jtpl          → Jadoon Technologies Private Limited
+#   sana_expert     → SanaExpert GmbH (Jan 2025 – Present)
+#   siemens_thesis  → Siemens Master Thesis (Jun 2025 – Dec 2025)
+#   amidiro         → amidiro (Dec 2023 – Nov 2024)
+#   remote_native   → Remote Native GmbH (Apr 2023 – Oct 2023)
+#   jtpl_senior     → Jadoon Technologies – Senior Full Stack (Nov 2021 – Dec 2022)
+#   jtpl_associate  → Jadoon Technologies – Associate (Nov 2020 – Oct 2021)
 #
 # WRITING TIPS FOR BULLETS:
 #   - Always start with a strong action verb (Built, Designed, Led, Automated...)
@@ -60,23 +60,22 @@ tailored_bullets:
 
   sana_expert:
     - "Architected and deployed production-grade multi-agent AI system using LangGraph and LlamaIndex,
-      automating 85%+ of customer support tickets across 5 countries with full PII masking compliance."
+      automating 85%+ of customer support tickets across multiple countries with full PII masking compliance."
     - "Built a real-time agentic sales assistant (Purmeo) with audio + text I/O, integrating OpenAI
       Whisper, TTS, and GPT-4o into a seamless conversational flow."
-    - "Fine-tuned FLUX.dev diffusion models with LoRA adapters to generate brand-consistent AI
-      influencer content at scale."
-    - "Developed an end-to-end AI Content Management System integrating n8n workflows for auto-posting
-      across Instagram, Facebook, TikTok, and Shopify."
+    - "Designed and deployed advanced RAG system powered by knowledge graphs and contextual reasoning
+      for enterprise-grade customer support automation."
+
+  siemens_thesis:
+    - "Conducting Master's Thesis research on Anomaly Detection Algorithms for the Unknown-Unknown Paradigm
+      in collaboration with Siemens production engineering teams."
 
   amidiro:
-    - "Led development of Amidiro Audio Assistant using LLMs and real-time speech pipelines, improving
-      lead conversion by 20% and reducing average call handling time by 15%."
-    - "Engineered a YOLO v9 computer vision pipeline on the FireNet dataset, integrated with an LLM
-      report generator for automated Safety & Maintenance documentation."
-    - "Designed and shipped a WhatsApp-native social media content platform leveraging Meta Graph API,
-      TikTok API, and Gemini Flash for AI-assisted content generation."
-    - "Built internal RAG knowledge retrieval system from 50+ consulting research papers, cutting
-      consultant research time by 60%."
+    - "Led development of AI-powered audio assistant and RAG knowledge retrieval systems using LLMs,
+      speech models, and OpenAI-based pipelines, improving lead conversion by 20%."
+    - "Built YOLOv9 safety reporting workflows and Handelsregister data extraction pipelines to AWS DynamoDB,
+      reducing call handling time by 15%."
+    - "Delivered advanced training programs on Prompt Engineering, RAG, and LLM fine-tuning to cross-functional teams."
 
   remote_native:
     - "Synthesized 5M+ e-commerce records using LLMs to generate a custom training dataset for
@@ -85,6 +84,12 @@ tailored_bullets:
       deployed with an interactive Streamlit interface."
     - "Implemented a full MLOps pipeline on Azure Databricks covering ETL, model training,
       evaluation, versioning, and automated retraining triggers."
+
+  jtpl_senior:
+    - "Led development of scalable full-stack applications using Python, TypeScript, React.js, and Next.js,
+      owning complex backend, frontend, and integration features end-to-end."
+    - "Designed robust APIs, automation workflows, and ETL pipelines to improve performance and maintainability."
+    - "Managed and mentored a team of 8 engineers across code reviews, planning, and high-quality delivery."
 
 
 # --- CUSTOM PROJECTS ---

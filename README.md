@@ -95,7 +95,7 @@ Example YAML customization payload:
 
 target_role: "Senior Machine Learning Engineer | Generative AI Lead"
 
-summary: "Results-driven Machine Learning Engineer with 5+ years of experience in artificial intelligence, LLM frameworks, MLOps, and agentic workflows. Proven track record of designing and deploying state-of-the-art LLM pipelines and RAG systems that automate complex business processes and increase efficiency by 80%."
+summary: "Results-driven Machine Learning Engineer with 3+ years of experience in artificial intelligence, LLM frameworks, MLOps, and agentic workflows. Proven track record of designing and deploying state-of-the-art LLM pipelines and RAG systems that automate complex business processes and increase efficiency by 80%."
 
 skills_highlight: "LangGraph, CrewAI, LlamaIndex, fine-tuning LLaMA, vector embeddings, cloud deployments (Azure/AWS), MLOps pipelines."
 
