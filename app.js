@@ -403,14 +403,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Print button
   const printBtn = document.getElementById("btn-print");
-  
+
   // Login Elements
   const loginForm = document.getElementById("login-form");
   const usernameInput = document.getElementById("username");
   const loginError = document.getElementById("login-error");
   const btnLogout = document.getElementById("btn-logout");
   const roleBadge = document.getElementById("role-badge");
-  
+
   // Superadmin Elements
   const superadminConsole = document.getElementById("superadmin-console");
   const adminThemeColor = document.getElementById("admin-theme-color");
@@ -802,7 +802,7 @@ document.addEventListener("DOMContentLoaded", () => {
       roleBadge.innerText = "Superadmin";
       roleBadge.className = "role-badge superadmin";
       superadminConsole.style.display = "block";
-      
+
       // Seed Admin specific features
       adminBaseCvEditor.value = JSON.stringify(activeBaseCV, null, 2);
       seedAdminLogs();
@@ -817,7 +817,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // Reset layout settings to match defaults
     document.documentElement.style.setProperty('--primary', "#6366f1");
     document.documentElement.style.setProperty('--primary-hover', "#4f46e5");
-    
+
     marginSlider.value = 15;
     marginVal.innerText = "15mm";
     document.documentElement.style.setProperty('--resume-margin', "15mm");
@@ -1075,32 +1075,32 @@ document.addEventListener("DOMContentLoaded", () => {
 
     } catch (err) {
       console.warn('Backend PDF generation failed or is not available. Falling back to client-side html2pdf.js...', err);
-      
+
       try {
         const element = document.getElementById('resume-paper');
         const originalBoxShadow = element.style.boxShadow;
         const originalTransition = element.style.transition;
-        
+
         element.style.boxShadow = 'none';
         element.style.transition = 'none';
-        
+
         const opt = {
-          margin:       0,
-          filename:     `${safeName}_Resume.pdf`,
-          image:        { type: 'jpeg', quality: 0.85 },
-          html2canvas:  { scale: 1.5, useCORS: true, logging: false },
-          jsPDF:        { unit: 'mm', format: 'a4', orientation: 'portrait' }
+          margin: 0,
+          filename: `${safeName}_Resume.pdf`,
+          image: { type: 'jpeg', quality: 0.92 },
+          html2canvas: { scale: 1.5, useCORS: true, logging: false },
+          jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
         };
-        
+
         await html2pdf().set(opt).from(element).save();
-        
+
         element.style.boxShadow = originalBoxShadow;
         element.style.transition = originalTransition;
 
         if (currentUser === "omer") {
           addAdminLog(`PDF successfully compiled locally: ${safeName}_Resume.pdf`);
         }
-        
+
       } catch (fallbackErr) {
         console.error('Client-side PDF generation failed:', fallbackErr);
         alert('PDF generation failed. Please use the "Print / ATS PDF" button as a high-fidelity alternative.');
