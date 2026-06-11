@@ -994,16 +994,36 @@ document.addEventListener("DOMContentLoaded", () => {
     try {
       const css = await fetch('/style.css').then(r => r.text());
 
+      // Helper function to compress and resize image to keep PDF size small
+      const compressImageToDataUri = (imgUrl, maxDim = 200, quality = 0.8) => {
+        return new Promise((resolve, reject) => {
+          const img = new Image();
+          img.crossOrigin = 'Anonymous';
+          img.onload = () => {
+            const canvas = document.createElement('canvas');
+            let w = img.width;
+            let h = img.height;
+            if (w > h) {
+              if (w > maxDim) { h = Math.round(img.height * maxDim / img.width); w = maxDim; }
+            } else {
+              if (h > maxDim) { w = Math.round(img.width * maxDim / img.height); h = maxDim; }
+            }
+            canvas.width = w;
+            canvas.height = h;
+            const ctx = canvas.getContext('2d');
+            ctx.drawImage(img, 0, 0, w, h);
+            resolve(canvas.toDataURL('image/jpeg', quality));
+          };
+          img.onerror = (err) => reject(err);
+          img.src = imgUrl;
+        });
+      };
+
       let resumeHtml = document.getElementById('resume-paper').outerHTML;
       const imgEl = document.querySelector('.resume-pic');
-      if (imgEl && imgEl.src && (imgEl.src.startsWith('http') || imgEl.src.includes('assets/'))) {
+      if (imgEl && imgEl.src && (imgEl.src.startsWith('http') || imgEl.src.includes('assets/') || imgEl.src.startsWith('data:'))) {
         try {
-          const imgBlob = await fetch(imgEl.src).then(r => r.blob());
-          const dataUri = await new Promise(res => {
-            const reader = new FileReader();
-            reader.onloadend = () => res(reader.result);
-            reader.readAsDataURL(imgBlob);
-          });
+          const dataUri = await compressImageToDataUri(imgEl.src);
           resumeHtml = resumeHtml.replace(/src="[^"]*"/, `src="${dataUri}"`);
         } catch (_) { }
       }
@@ -1067,8 +1087,8 @@ document.addEventListener("DOMContentLoaded", () => {
         const opt = {
           margin:       0,
           filename:     `${safeName}_Resume.pdf`,
-          image:        { type: 'jpeg', quality: 0.98 },
-          html2canvas:  { scale: 2, useCORS: true, logging: false },
+          image:        { type: 'jpeg', quality: 0.85 },
+          html2canvas:  { scale: 1.5, useCORS: true, logging: false },
           jsPDF:        { unit: 'mm', format: 'a4', orientation: 'portrait' }
         };
         
