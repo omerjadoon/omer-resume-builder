@@ -1088,7 +1088,7 @@ document.addEventListener("DOMContentLoaded", () => {
           margin: 0,
           filename: `${safeName}_Resume.pdf`,
           image: { type: 'jpeg', quality: 0.92 },
-          html2canvas: { scale: 1.5, useCORS: true, logging: false },
+          html2canvas: { scale: 1.9, useCORS: true, logging: false },
           jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
         };
 
