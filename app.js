@@ -1018,15 +1018,16 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // Print Action
+  // Print Action (uses the fixed @media print CSS — never blank)
   printBtn.addEventListener("click", () => {
-    if (currentUser === "omer") {
-      addAdminLog("Initiated native print dialog");
-    }
+    if (currentUser === "omer") addAdminLog("Initiated native print dialog");
     window.print();
   });
 
-  // Direct PDF Download (headless Chrome POST)
+  // Direct PDF Download
+  // Primary  : POST to /api/generate-pdf (Chrome headless via serve.py) → real text PDF
+  // Fallback : open clean popup window containing only the resume and auto-print from there
+  //            (never blank — no editor UI, no broken print CSS in the popup)
   const downloadBtn = document.getElementById("btn-download-pdf");
   downloadBtn.addEventListener("click", async () => {
     const btn = downloadBtn;
@@ -1034,79 +1035,63 @@ document.addEventListener("DOMContentLoaded", () => {
     btn.innerHTML = `<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg><span>Generating...</span>`;
     btn.disabled = true;
 
-    if (currentUser === "omer") {
-      addAdminLog("Initiated PDF compile request");
-    }
+    if (currentUser === "omer") addAdminLog("Initiated PDF compile request");
 
     const safeName = activeBaseCV.name.replace(/\s+/g, '_');
 
-    try {
-      const css = await fetch('/style.css').then(r => r.text());
+    // Build self-contained HTML BEFORE the try block so both server path and fallback can use it
+    const css = await fetch('/style.css').then(r => r.text()).catch(() => '');
 
-      // Helper function to compress and resize image to keep PDF size small
-      const compressImageToDataUri = (imgUrl, maxDim = 200, quality = 0.8) => {
-        return new Promise((resolve, reject) => {
-          const img = new Image();
-          img.crossOrigin = 'Anonymous';
-          img.onload = () => {
-            const canvas = document.createElement('canvas');
-            let w = img.width;
-            let h = img.height;
-            if (w > h) {
-              if (w > maxDim) { h = Math.round(img.height * maxDim / img.width); w = maxDim; }
-            } else {
-              if (h > maxDim) { w = Math.round(img.width * maxDim / img.height); h = maxDim; }
-            }
-            canvas.width = w;
-            canvas.height = h;
-            const ctx = canvas.getContext('2d');
-            ctx.drawImage(img, 0, 0, w, h);
-            resolve(canvas.toDataURL('image/jpeg', quality));
-          };
-          img.onerror = (err) => reject(err);
-          img.src = imgUrl;
-        });
+    const compressImageToDataUri = (imgUrl, maxDim = 200, quality = 0.8) => new Promise((resolve, reject) => {
+      const img = new Image();
+      img.crossOrigin = 'Anonymous';
+      img.onload = () => {
+        const canvas = document.createElement('canvas');
+        let w = img.width, h = img.height;
+        if (w > h) { if (w > maxDim) { h = Math.round(h * maxDim / w); w = maxDim; } }
+        else        { if (h > maxDim) { w = Math.round(w * maxDim / h); h = maxDim; } }
+        canvas.width = w; canvas.height = h;
+        canvas.getContext('2d').drawImage(img, 0, 0, w, h);
+        resolve(canvas.toDataURL('image/jpeg', quality));
       };
+      img.onerror = reject;
+      img.src = imgUrl;
+    });
 
-      let resumeHtml = document.getElementById('resume-paper').outerHTML;
-      const imgEl = document.querySelector('.resume-pic');
-      if (imgEl && imgEl.src && (imgEl.src.startsWith('http') || imgEl.src.includes('assets/') || imgEl.src.startsWith('data:'))) {
-        try {
-          const dataUri = await compressImageToDataUri(imgEl.src);
-          resumeHtml = resumeHtml.replace(/src="[^"]*"/, `src="${dataUri}"`);
-        } catch (_) { }
-      }
+    let resumeHtml = document.getElementById('resume-paper').outerHTML;
+    const imgEl = document.querySelector('.resume-pic');
+    if (imgEl && imgEl.src && (imgEl.src.startsWith('http') || imgEl.src.includes('assets/') || imgEl.src.startsWith('data:'))) {
+      try {
+        const dataUri = await compressImageToDataUri(imgEl.src);
+        resumeHtml = resumeHtml.replace(/src="[^"]*"/, `src="${dataUri}"`);
+      } catch (_) {}
+    }
 
-      const selfContainedHtml = `<!DOCTYPE html>
+    const printOverrides = `
+      body { margin: 0; padding: 0; background: white; }
+      .resume-paper { box-shadow: none !important; margin: 0 auto !important; width: 210mm !important; min-height: auto !important; }
+      @media print { @page { size: a4; margin: 0; } }
+    `;
+
+    const selfContainedHtml = `<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-  <style>
-    ${css}
-    body { margin: 0; padding: 0; background: white; }
-    .resume-paper {
-      box-shadow: none !important;
-      margin: 0 !important;
-      width: 210mm !important;
-      min-height: auto !important;
-    }
-  </style>
+  <style>${css}${printOverrides}</style>
 </head>
-<body>
-  ${resumeHtml}
-</body>
+<body>${resumeHtml}</body>
 </html>`;
 
+    try {
+      // Primary: server-side Chrome headless — produces a real selectable-text PDF, auto-downloads
       const response = await fetch('/api/generate-pdf', {
         method: 'POST',
         headers: { 'Content-Type': 'text/html; charset=utf-8' },
         body: selfContainedHtml
       });
 
-      if (!response.ok) {
-        throw new Error(`Server error: ${response.status} ${response.statusText}`);
-      }
+      if (!response.ok) throw new Error(`Server error: ${response.status} ${response.statusText}`);
 
       const pdfBlob = await response.blob();
       const url = URL.createObjectURL(pdfBlob);
@@ -1118,45 +1103,27 @@ document.addEventListener("DOMContentLoaded", () => {
       document.body.removeChild(a);
       URL.revokeObjectURL(url);
 
-      if (currentUser === "omer") {
-        addAdminLog(`PDF successfully generated via server: ${safeName}_Resume.pdf`);
-      }
+      if (currentUser === "omer") addAdminLog(`PDF generated via server: ${safeName}_Resume.pdf`);
 
     } catch (err) {
-      // Server-side PDF not available — fall back to native browser print.
-      // window.print() uses the browser's PDF renderer which preserves real
-      // selectable text, making the output fully ATS-readable (unlike html2canvas
-      // which rasterises everything into a JPEG image).
-      console.warn('Backend PDF generation failed. Falling back to native print dialog for ATS-safe text PDF...', err);
+      // Fallback: open the self-contained HTML in a new popup window and auto-print.
+      // The popup contains ONLY the resume — no editor UI, no conflicting CSS —
+      // so the printed/saved PDF is always a proper text-based document.
+      console.warn('Server PDF unavailable — using popup print fallback:', err);
+      if (currentUser === "omer") addAdminLog("Server unavailable — popup fallback (ATS-safe text PDF)");
 
-      if (currentUser === "omer") {
-        addAdminLog("Server PDF unavailable — opening native print dialog (ATS-safe text PDF)");
+      const popup = window.open('', '_blank', 'width=920,height=780,scrollbars=yes');
+      if (!popup) {
+        alert('Popup blocked!\n\nAllow popups for this site and try again, or use "Print / ATS PDF" → Save as PDF.');
+      } else {
+        popup.document.open();
+        popup.document.write(selfContainedHtml);
+        popup.document.close();
+        // Auto-trigger print once fonts have loaded
+        popup.addEventListener('load', () => {
+          setTimeout(() => { popup.focus(); popup.print(); }, 600);
+        });
       }
-
-      // Brief toast so the user knows what to do
-      const toast = document.createElement('div');
-      toast.style.cssText = `
-        position: fixed; bottom: 1.5rem; left: 50%; transform: translateX(-50%);
-        background: rgba(15,23,42,0.95); border: 1px solid rgba(99,102,241,0.4);
-        color: #e2e8f0; padding: 0.75rem 1.25rem; border-radius: 0.75rem;
-        font-size: 0.85rem; font-family: Inter, sans-serif; z-index: 99999;
-        backdrop-filter: blur(10px); box-shadow: 0 10px 25px rgba(0,0,0,0.4);
-        display: flex; align-items: center; gap: 0.6rem; max-width: 480px;
-        animation: slideInToast 0.3s ease;
-      `;
-      toast.innerHTML = `
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#818cf8" stroke-width="2">
-          <circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/>
-        </svg>
-        <span>In the print dialog, select <strong style="color:#a5b4fc">Save as PDF</strong> as the destination for a fully ATS-readable text PDF.</span>
-      `;
-      document.body.appendChild(toast);
-      setTimeout(() => toast.remove(), 6000);
-
-      // Small delay so toast renders before the print dialog blocks the UI
-      await new Promise(r => setTimeout(r, 200));
-      window.print();
-
     } finally {
       btn.innerHTML = originalHtml;
       btn.disabled = false;
@@ -1166,3 +1133,4 @@ document.addEventListener("DOMContentLoaded", () => {
   // Run initial session check
   initSession();
 });
+

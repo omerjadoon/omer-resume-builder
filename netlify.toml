@@ -1,5 +1,16 @@
 [build]
   publish = "."
+  functions = "netlify/functions"
+
+[functions]
+  # Allow up to 30 seconds for Chrome to render the PDF
+  node_bundler = "esbuild"
+
+[[redirects]]
+  # Map the same URL the app uses (/api/generate-pdf) to the serverless function
+  from = "/api/generate-pdf"
+  to = "/.netlify/functions/generate-pdf"
+  status = 200
 
 [[headers]]
   for = "/*"

@@ -577,14 +577,25 @@ input:checked + .slider:before {
   .editor-panel,
   .action-overlay,
   .page-break-hint,
-  .preview-panel {
+  .live-edit-badge,
+  .btn-rerender {
     display: none !important;
   }
 
+  /* Show only the preview panel and let the resume paper fill it */
+  .preview-panel {
+    display: block !important;
+    background: #ffffff !important;
+    padding: 0 !important;
+    height: auto !important;
+    overflow: visible !important;
+  }
+
   .resume-paper {
+    display: block !important;
     width: 100% !important;
     min-height: 0 !important;
-    padding: 15mm !important;   /* Keep internal visual margins */
+    padding: 15mm !important;
     margin: 0 !important;
     box-shadow: none !important;
     color: #000000 !important;
