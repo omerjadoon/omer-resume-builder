@@ -218,14 +218,14 @@ projects:
           degree: "Master's in Artificial Intelligence",
           date: "APR 2023 – Present",
           location: "Erlangen, Germany",
-          highlights: "Focus: Big Data Analytics, Human-Computer Interaction, Business Intelligence | 2nd Semester"
+          highlights: "Focus: Big Data Analytics, AI and ML, Business Intelligence"
         },
         {
           institution: "Southwest Forestry University, Kunming",
           degree: "BSc in Computer Science & Engineering",
           date: "MAR 2018 – DEC 2021",
           location: "Kunming, China",
-          highlights: "Focus: Data Science, Databases, Machine Learning | CSC Provincial Scholarship – Government of China"
+          highlights: "Focus: Data Science, Databases, Machine Learning "
         }
       ],
       awards: [
@@ -233,10 +233,10 @@ projects:
         { title: "PM Laptop Scheme", detail: "Received Laptop – PM Laptop Scheme, Pakistan", date: "Jul 2016" }
       ],
       languages: [
-        { name: "English", level: "C1 — Professional Working Proficiency" },
-        { name: "German", level: "A2 — Elementary" },
-        { name: "Urdu", level: "C2 — Native" },
-        { name: "Chinese", level: "B2 — Upper Intermediate" }
+        { name: "English", level: "C1" },
+        { name: "German", level: "A2" },
+        { name: "Urdu", level: "C2" },
+        { name: "Chinese", level: "B2" }
       ],
       projects: [
         {
@@ -383,6 +383,7 @@ let activeBaseCV = null;
 let activeTailoredYaml = "";
 let enabledRules = [0, 1, 2, 3, 4, 5, 6];
 let yamlLogTimeout = null;
+let hasLiveEdits = false;
 
 // App Logic & UI Bindings
 document.addEventListener("DOMContentLoaded", () => {
@@ -619,11 +620,40 @@ document.addEventListener("DOMContentLoaded", () => {
       </div>
     `;
 
-    // Render to DOM
-    resumeContainer.innerHTML = html;
+    // Render to DOM — only when no live inline edits are active
+    if (!hasLiveEdits) {
+      resumeContainer.innerHTML = html;
+      resumeContainer.contentEditable = "true";
+      resumeContainer.spellcheck = false;
+
+      // Show the edit indicator
+      const editBadge = document.getElementById("live-edit-badge");
+      if (editBadge) editBadge.style.display = "flex";
+      const reRenderBtn = document.getElementById("btn-rerender");
+      if (reRenderBtn) reRenderBtn.style.display = "none";
+
+      // Detect first keystroke on the live resume and lock YAML re-renders
+      resumeContainer.addEventListener("input", () => {
+        if (!hasLiveEdits) {
+          hasLiveEdits = true;
+          const btn = document.getElementById("btn-rerender");
+          if (btn) btn.style.display = "flex";
+          const badge = document.getElementById("live-edit-badge");
+          if (badge) badge.classList.add("editing");
+          if (currentUser === "omer") addAdminLog("Live inline resume edits detected");
+        }
+      });
+    }
 
     // Recalculate ATS Audit score
     runAtsAudit(merged, showPhoto);
+  }
+
+  // Clear inline edits and force a fresh render from YAML
+  function resetLiveEdits() {
+    hasLiveEdits = false;
+    resumeContainer.contentEditable = "false";
+    updateResume();
   }
 
   // Real-time ATS Audit System
@@ -860,6 +890,7 @@ document.addEventListener("DOMContentLoaded", () => {
     activeTailoredYaml = "";
     usernameInput.value = "";
     loginError.innerText = "";
+    hasLiveEdits = false;
   }
 
   // Initialize session state on page load
@@ -977,6 +1008,15 @@ document.addEventListener("DOMContentLoaded", () => {
       }, 1200);
     }
   });
+
+  // Re-render from YAML (wipes live inline edits)
+  const reRenderBtn = document.getElementById("btn-rerender");
+  if (reRenderBtn) {
+    reRenderBtn.addEventListener("click", () => {
+      if (currentUser === "omer") addAdminLog("Re-rendered from YAML — inline edits cleared");
+      resetLiveEdits();
+    });
+  }
 
   // Print Action
   printBtn.addEventListener("click", () => {
