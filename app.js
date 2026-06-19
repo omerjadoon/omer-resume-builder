@@ -1123,37 +1123,40 @@ document.addEventListener("DOMContentLoaded", () => {
       }
 
     } catch (err) {
-      console.warn('Backend PDF generation failed or is not available. Falling back to client-side html2pdf.js...', err);
+      // Server-side PDF not available — fall back to native browser print.
+      // window.print() uses the browser's PDF renderer which preserves real
+      // selectable text, making the output fully ATS-readable (unlike html2canvas
+      // which rasterises everything into a JPEG image).
+      console.warn('Backend PDF generation failed. Falling back to native print dialog for ATS-safe text PDF...', err);
 
-      try {
-        const element = document.getElementById('resume-paper');
-        const originalBoxShadow = element.style.boxShadow;
-        const originalTransition = element.style.transition;
-
-        element.style.boxShadow = 'none';
-        element.style.transition = 'none';
-
-        const opt = {
-          margin: 0,
-          filename: `${safeName}_Resume.pdf`,
-          image: { type: 'jpeg', quality: 0.92 },
-          html2canvas: { scale: 1.9, useCORS: true, logging: false },
-          jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
-        };
-
-        await html2pdf().set(opt).from(element).save();
-
-        element.style.boxShadow = originalBoxShadow;
-        element.style.transition = originalTransition;
-
-        if (currentUser === "omer") {
-          addAdminLog(`PDF successfully compiled locally: ${safeName}_Resume.pdf`);
-        }
-
-      } catch (fallbackErr) {
-        console.error('Client-side PDF generation failed:', fallbackErr);
-        alert('PDF generation failed. Please use the "Print / ATS PDF" button as a high-fidelity alternative.');
+      if (currentUser === "omer") {
+        addAdminLog("Server PDF unavailable — opening native print dialog (ATS-safe text PDF)");
       }
+
+      // Brief toast so the user knows what to do
+      const toast = document.createElement('div');
+      toast.style.cssText = `
+        position: fixed; bottom: 1.5rem; left: 50%; transform: translateX(-50%);
+        background: rgba(15,23,42,0.95); border: 1px solid rgba(99,102,241,0.4);
+        color: #e2e8f0; padding: 0.75rem 1.25rem; border-radius: 0.75rem;
+        font-size: 0.85rem; font-family: Inter, sans-serif; z-index: 99999;
+        backdrop-filter: blur(10px); box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+        display: flex; align-items: center; gap: 0.6rem; max-width: 480px;
+        animation: slideInToast 0.3s ease;
+      `;
+      toast.innerHTML = `
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#818cf8" stroke-width="2">
+          <circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/>
+        </svg>
+        <span>In the print dialog, select <strong style="color:#a5b4fc">Save as PDF</strong> as the destination for a fully ATS-readable text PDF.</span>
+      `;
+      document.body.appendChild(toast);
+      setTimeout(() => toast.remove(), 6000);
+
+      // Small delay so toast renders before the print dialog blocks the UI
+      await new Promise(r => setTimeout(r, 200));
+      window.print();
+
     } finally {
       btn.innerHTML = originalHtml;
       btn.disabled = false;
