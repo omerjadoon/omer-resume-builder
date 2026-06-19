@@ -627,9 +627,9 @@ input:checked + .slider:before {
     page-break-after: avoid !important;
   }
 
-  /* Prevent a section from starting at the very bottom of a page */
+  /* Prevent a section from starting at the very bottom of a page, but allow it to split */
   .resume-section {
-    break-inside: avoid !important;
+    break-inside: auto !important;
   }
 }
 
