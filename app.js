@@ -166,10 +166,10 @@ projects:
       contact: {
         phone: "+49 176 26503018",
         email: "zurerahs786@gmail.com",
-        website: "linkedin.com/in/zurerah-shahid",
-        websiteUrl: "https://linkedin.com/in/zurerah-shahid",
-        linkedin: "linkedin.com/in/zurerah-shahid",
-        linkedinUrl: "https://linkedin.com/in/zurerah-shahid",
+        website: "linkedin.com/in/zurerah",
+        websiteUrl: "https://linkedin.com/in/zurerah",
+        linkedin: "linkedin.com/in/zurerah",
+        linkedinUrl: "https://linkedin.com/in/zurerah",
         github: "github.com/zurerah",
         githubUrl: "https://github.com/zurerah",
         location: "Erlangen, Germany"
