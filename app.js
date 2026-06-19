@@ -422,7 +422,16 @@ document.addEventListener("DOMContentLoaded", () => {
     if (!currentUser || !activeBaseCV) return;
 
     let customData = {};
-    const rawYaml = yamlEditor.value;
+    let rawYaml = yamlEditor.value;
+
+    // Detect and strip markdown code fences from the editor
+    const trimmed = rawYaml.trim();
+    const codeBlockRegex = /^```(?:yaml|yml)?\s*([\s\S]*?)\s*```$/i;
+    const match = trimmed.match(codeBlockRegex);
+    if (match) {
+      rawYaml = match[1];
+      yamlEditor.value = rawYaml;
+    }
 
     // Parse YAML
     try {
