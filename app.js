@@ -159,7 +159,7 @@ projects:
   },
   zurerah: {
     role: "user",
-    profileImage: "assets/zurerah.png",
+    profileImage: "assets/zurerah2.jpeg",
     baseData: {
       name: "Zurerah Shahid",
       title: "Data Analyst | Machine Learning Engineer",
@@ -233,10 +233,10 @@ projects:
         { title: "PM Laptop Scheme", detail: "Received Laptop – PM Laptop Scheme, Pakistan", date: "Jul 2016" }
       ],
       languages: [
-        { name: "English", level: "Professional Working Proficiency" },
-        { name: "German", level: "Beginner (Learning)" },
-        { name: "Urdu", level: "Native" },
-        { name: "Chinese", level: "Elementary" }
+        { name: "English", level: "C1 — Professional Working Proficiency" },
+        { name: "German", level: "A2 — Elementary" },
+        { name: "Urdu", level: "C2 — Native" },
+        { name: "Chinese", level: "B2 — Upper Intermediate" }
       ],
       projects: [
         {
