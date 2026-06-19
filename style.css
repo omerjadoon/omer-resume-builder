@@ -3,19 +3,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap');
 
 :root {
-  --primary: #6366f1; /* Indigo */
+  --primary: #6366f1;
+  /* Indigo */
   --primary-hover: #4f46e5;
-  --bg-editor: #0f172a; /* Slate 900 */
-  --card-editor: rgba(30, 41, 59, 0.7); /* Slate 800 with transparency */
+  --bg-editor: #0f172a;
+  /* Slate 900 */
+  --card-editor: rgba(30, 41, 59, 0.7);
+  /* Slate 800 with transparency */
   --border-editor: rgba(255, 255, 255, 0.08);
   --text-editor: #f8fafc;
   --text-muted: #94a3b8;
-  
+
   /* Resume Theme Settings (Customizable in UI) */
   --resume-bg: #ffffff;
-  --resume-text: #1e293b; /* Slate 800 */
+  --resume-text: #1e293b;
+  /* Slate 800 */
   --resume-text-muted: #475569;
-  --resume-accent: #0f172a; /* Dark Navy for ATS standard */
+  --resume-accent: #0f172a;
+  /* Dark Navy for ATS standard */
   --resume-font: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
   --resume-margin: 15mm;
   --resume-font-size: 10pt;
@@ -149,11 +154,11 @@ body {
   border-radius: 50%;
 }
 
-input:checked + .slider {
+input:checked+.slider {
   background-color: var(--primary);
 }
 
-input:checked + .slider:before {
+input:checked+.slider:before {
   transform: translateX(1.25rem);
 }
 
@@ -171,7 +176,8 @@ input:checked + .slider:before {
   font-family: 'Fira Code', monospace;
   font-size: 0.825rem;
   background-color: #020617;
-  color: #38bdf8; /* Light blue code text */
+  color: #38bdf8;
+  /* Light blue code text */
   border: 1px solid var(--border-editor);
   border-radius: 0.5rem;
   padding: 0.75rem;
@@ -199,14 +205,16 @@ input:checked + .slider:before {
 }
 
 .status-ok {
-  color: #4ade80; /* Green */
+  color: #4ade80;
+  /* Green */
   display: flex;
   align-items: center;
   gap: 0.25rem;
 }
 
 .status-error {
-  color: #f87171; /* Red */
+  color: #f87171;
+  /* Red */
   display: flex;
   align-items: center;
   gap: 0.25rem;
@@ -235,7 +243,8 @@ input:checked + .slider:before {
 
 /* Right Panel - Live Preview Frame */
 .preview-panel {
-  background-color: #94a3b8; /* Mid-slate: visually separates white resume paper cleanly */
+  background-color: #94a3b8;
+  /* Mid-slate: visually separates white resume paper cleanly */
   height: 100%;
   overflow-y: auto;
   padding: 2.5rem;
@@ -251,8 +260,10 @@ input:checked + .slider:before {
   background-color: var(--resume-bg);
   color: var(--resume-text);
   font-family: var(--resume-font);
-  width: 210mm; /* A4 width */
-  min-height: 297mm; /* A4 height */
+  width: 210mm;
+  /* A4 width */
+  min-height: 297mm;
+  /* A4 height */
   padding: var(--resume-margin);
   box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
   position: relative;
@@ -418,7 +429,8 @@ input:checked + .slider:before {
   color: var(--resume-text);
 }
 
-.experience-date, .experience-location {
+.experience-date,
+.experience-location {
   font-weight: 400;
   color: var(--resume-text-muted);
 }
@@ -537,6 +549,7 @@ input:checked + .slider:before {
   left: 0;
   pointer-events: none;
 }
+
 .page-break-hint::after {
   content: 'Page break';
   position: absolute;
@@ -551,7 +564,8 @@ input:checked + .slider:before {
 
 /* Print template adjustment styles */
 .template-modern {
-  --resume-accent: #312e81; /* Indigo-900 */
+  --resume-accent: #312e81;
+  /* Indigo-900 */
 }
 
 /* --- STRICTOR ATS SINGLE COLUMN TEXT PRESETS --- */
@@ -565,8 +579,10 @@ input:checked + .slider:before {
 
 /* PRINT MEDIA STYLES - CRITICAL FOR 100% QUALITY PDF */
 @media print {
+
   /* Hide all UI elements */
-  body, .app-container {
+  body,
+  .app-container {
     background: #ffffff !important;
     color: #000000 !important;
     height: auto !important;
@@ -617,7 +633,10 @@ input:checked + .slider:before {
   }
 
   /* Keep experience bullets together */
-  .experience-item, .education-item, .skills-row, .project-item {
+  .experience-item,
+  .education-item,
+  .skills-row,
+  .project-item {
     break-inside: avoid !important;
   }
 
@@ -637,12 +656,15 @@ input:checked + .slider:before {
 body.logged-out .app-container {
   display: none !important;
 }
+
 body.logged-out .login-screen {
   display: flex !important;
 }
+
 body.logged-in .app-container {
   display: grid !important;
 }
+
 body.logged-in .login-screen {
   display: none !important;
 }
@@ -669,8 +691,8 @@ body.logged-in .login-screen {
   padding: 3rem 2.5rem;
   width: 90%;
   max-width: 440px;
-  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5), 
-              0 0 40px rgba(99, 102, 241, 0.1);
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5),
+    0 0 40px rgba(99, 102, 241, 0.1);
   text-align: center;
   animation: slideIn 0.5s cubic-bezier(0.16, 1, 0.3, 1);
 }
@@ -680,6 +702,7 @@ body.logged-in .login-screen {
     opacity: 0;
     transform: translateY(20px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -858,7 +881,8 @@ body.logged-in .login-screen {
   font-family: 'Fira Code', monospace;
   font-size: 0.75rem;
   background: #020617;
-  color: #a7f3d0; /* emerald green text */
+  color: #a7f3d0;
+  /* emerald green text */
   border: 1px solid var(--border-editor);
   border-radius: 0.375rem;
   padding: 0.5rem;
@@ -889,10 +913,12 @@ body.logged-in .login-screen {
 .admin-log-entry {
   line-height: 1.3;
 }
+
 .admin-log-entry .timestamp {
   color: var(--primary);
   margin-right: 0.3rem;
 }
+
 .admin-log-entry .action {
   color: #cbd5e1;
 }
@@ -910,6 +936,7 @@ body.logged-in .login-screen {
   gap: 0.5rem;
   font-size: 0.775rem;
 }
+
 
 .admin-color-input {
   -webkit-appearance: none;
@@ -963,8 +990,15 @@ body.logged-in .login-screen {
 }
 
 @keyframes pulse-badge {
-  0%, 100% { box-shadow: 0 0 0 0 rgba(251, 191, 36, 0.3); }
-  50%       { box-shadow: 0 0 0 6px rgba(251, 191, 36, 0); }
+
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 rgba(251, 191, 36, 0.3);
+  }
+
+  50% {
+    box-shadow: 0 0 0 6px rgba(251, 191, 36, 0);
+  }
 }
 
 /* Re-render from YAML button */
@@ -1002,6 +1036,7 @@ body.logged-in .login-screen {
 
 /* Hide all edit chrome from print */
 @media print {
+
   #resume-content[contenteditable="true"] div:hover,
   #resume-content[contenteditable="true"] span:hover,
   #resume-content[contenteditable="true"] li:hover,
@@ -1009,6 +1044,7 @@ body.logged-in .login-screen {
   #resume-content[contenteditable="true"] *:focus {
     outline: none !important;
   }
+
   .live-edit-badge,
   .btn-rerender {
     display: none !important;
