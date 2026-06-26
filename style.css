@@ -495,6 +495,32 @@ input:checked+.slider:before {
   color: var(--resume-text-muted);
 }
 
+/* Certifications Layout */
+.certifications-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.certification-item {
+  margin-bottom: 0.5rem;
+}
+
+.cert-header {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 700;
+  font-size: 0.875rem;
+  color: var(--resume-accent);
+}
+
+.cert-subheader {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.825rem;
+  color: var(--resume-text-muted);
+}
+
 /* Languages Layout */
 .languages-container {
   display: flex;
@@ -635,6 +661,7 @@ input:checked+.slider:before {
   /* Keep experience bullets together */
   .experience-item,
   .education-item,
+  .certification-item,
   .skills-row,
   .project-item {
     break-inside: avoid !important;

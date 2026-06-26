@@ -119,6 +119,16 @@ const USER_PROFILES = {
         { name: "English", level: "C1 — Professional Working Proficiency" },
         { name: "German", level: "A2 — Elementary" },
         { name: "Urdu", level: "C2 — Native" }
+      ],
+      certifications: [
+        {
+          name: "Microsoft Certified: Azure AI Apps and Agents Developer Associate",
+          issuer: "Microsoft",
+          date: "June 2026",
+          expiration: "June 2027",
+          credentialId: "195FA913B491DBB2",
+          url: "https://learn.microsoft.com/api/credentials/share/en-us/omerkhanjadoon/195FA913B491DBB2?sharingId"
+        }
       ]
     },
     defaultYaml: `# Tailor Your Resume Here to Match the Job Description!
@@ -155,6 +165,14 @@ tailored_bullets:
 projects:
   - name: "Autonomous Agentic Resume Builder"
     description: "Designed a real-time reactive YAML parser tool that dynamically merges base data with job-tailored bullets, generating standardized, print-optimized ATS resumes."
+
+certifications:
+  - name: "Microsoft Certified: Azure AI Apps and Agents Developer Associate"
+    issuer: "Microsoft"
+    date: "June 2026"
+    expiration: "June 2027"
+    credentialId: "195FA913B491DBB2"
+    url: "https://learn.microsoft.com/api/credentials/share/en-us/omerkhanjadoon/195FA913B491DBB2?sharingId"
 `
   },
   zurerah: {
@@ -458,7 +476,8 @@ document.addEventListener("DOMContentLoaded", () => {
       }),
       education: [...activeBaseCV.education],
       awards: [...activeBaseCV.awards],
-      languages: [...activeBaseCV.languages]
+      languages: [...activeBaseCV.languages],
+      certifications: activeBaseCV.certifications ? [...activeBaseCV.certifications] : []
     };
 
     // Process custom skills highlight from YAML if provided
@@ -600,6 +619,43 @@ document.addEventListener("DOMContentLoaded", () => {
       `;
     });
     html += `</div>`;
+
+    // 6.5 Certifications
+    const baseCertifications = (activeBaseCV.certifications && Array.isArray(activeBaseCV.certifications)) ? activeBaseCV.certifications : [];
+    const yamlCertifications = (customData.certifications && Array.isArray(customData.certifications)) ? customData.certifications : [];
+    const allCertifications = [...yamlCertifications, ...baseCertifications.filter(bc => !yamlCertifications.find(yc => yc.name === bc.name))];
+
+    if (allCertifications.length > 0) {
+      html += `
+        <div class="resume-section">
+          <div class="section-title">Certifications</div>
+          <div class="certifications-container">
+      `;
+      allCertifications.forEach(cert => {
+        const dateStr = cert.expiration ? `${cert.date} – ${cert.expiration}` : cert.date;
+        html += `
+          <div class="certification-item">
+            <div class="cert-header">
+              <span class="cert-name">${cert.name}</span>
+              <span class="experience-date">${dateStr}</span>
+            </div>
+            <div class="cert-subheader">
+              <span>${cert.issuer}</span>
+              ${cert.credentialId ? `<span class="cert-id" style="font-size: 0.825rem; color: var(--resume-text-muted);">Credential ID: ${cert.credentialId}</span>` : ''}
+            </div>
+            ${cert.url ? `
+              <div class="cert-link" style="font-size: 0.825rem; font-style: italic; margin-top: 0.15rem;">
+                <a href="${cert.url}" target="_blank" style="color: var(--primary); text-decoration: none;">Verify Credential</a>
+              </div>
+            ` : ''}
+          </div>
+        `;
+      });
+      html += `
+          </div>
+        </div>
+      `;
+    }
 
     // 7. Languages
     html += `
