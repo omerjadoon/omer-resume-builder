@@ -302,95 +302,118 @@ projects:
   },
   mohsin: {
     role: "user",
-    profileImage: "assets/mohsin.png",
+    profileImage: "assets/mohsin.jpeg",
     baseData: {
       name: "Mohsin Ali",
-      title: "Senior Backend & Cloud Infrastructure Engineer",
+      title: "IT Support Engineer",
       contact: {
-        phone: "+49 176 11223344",
-        email: "mohsin.ali@gmail.com",
-        website: "mohsin.cloud",
-        websiteUrl: "https://mohsin.cloud",
-        linkedin: "linkedin.com/in/mohsinali",
-        linkedinUrl: "https://linkedin.com/in/mohsinali",
-        github: "github.com/mohsinj",
-        githubUrl: "https://github.com/mohsinj",
-        location: "Munich, Germany"
+        phone: "+4915758478117",
+        email: "mohsinalikhanswati@outlook.com",
+        linkedin: "linkedin.com/in/mohsin-äli",
+        linkedinUrl: "https://linkedin.com/in/mohsin-äli",
+        location: "Erlangen, Bavaria, Germany"
       },
-      summary: "AWS Certified Solutions Architect with 5+ years of experience in backend development and cloud infrastructure. Specialized in building highly scalable, secure, and resilient microservices using Go, Python, Kubernetes, and Terraform, with a focus on CI/CD automation and database optimization.",
+      summary: "Customer-oriented and technical IT Support Engineer with a strong background in providing on-site and remote technical support for Windows and macOS. Experienced in software licensing and deployment (O365, Adobe, Zendesk, HubSpot, PowerBi), hardware maintenance, and network troubleshooting. Proven track record in optimizing service metrics, streamlining issue resolution processes, and implementing robust documentation practices.",
       skills: [
-        { category: "Programming Languages", items: "Go, Python, SQL, Bash scripting, Java, C++" },
-        { category: "Cloud & Containerization", items: "AWS (EKS, RDS, S3, Lambda, IAM, VPC), Google Cloud Platform, Docker, Kubernetes (EKS/GKE)" },
-        { category: "Infrastructure as Code", items: "Terraform, CloudFormation, Ansible, Helm" },
-        { category: "Databases & Caching", items: "PostgreSQL, MongoDB, Redis, MySQL, DynamoDB, Elasticsearch" },
-        { category: "CI/CD & Observability", items: "GitHub Actions, GitLab CI, Jenkins, Prometheus, Grafana, ELK Stack, Datadog" },
-        { category: "Backend Frameworks", items: "Gin (Go), FastAPI, Django, Flask, gRPC, REST APIs" }
+        { category: "User Support and Communication", items: "Ticketing Systems (e.g. Service Desk, ServiceNow, Zendesk), Remote Desktop Tools (e.g. TeamViewer, AnyDesk, Windows Remote Desktop), Collaboration and Communication (e.g. Microsoft Teams, Slack, Discord, G-chat), Email Clients (e.g. Microsoft Outlook, Gmail), Documentation Skills (e.g. Confluence)" },
+        { category: "System and Network Fundamentals", items: "Operating System Proficiency (Windows or macOS), Networking Knowledge (IP Addressing, LAN, WAN, Wi-Fi, TCP/IP, DHCP, DNS), Command-Line Skills (Cmd)" },
+        { category: "Infrastructure and Tools Management", items: "Software Installation and Configuration, AMDB/CMDB for asset tracking and management, Printer Setup and Maintenance, VOIP Knowledge (Voxox)" },
+        { category: "Professional Development and Automation", items: "Basic Scripting and Automation, Hardware Knowledge, Continuous Learning and Development" }
       ],
       experience: [
         {
-          company: "CloudScale Systems",
-          role: "Senior Cloud & DevOps Architect",
-          date: "Feb 2024 – Present",
-          location: "Munich, Germany",
-          id: "cloudscale",
+          company: "IBS-Intelligent Business Solutions",
+          role: "Desktop Support Engineer",
+          date: "Jan 15, 2023 – Present",
+          location: "Germany",
+          id: "ibs",
           bullets: [
-            "Architected and migrated 15+ legacy microservices to Kubernetes on AWS EKS, improving service availability to 99.99%.",
-            "Designed infrastructure provisioning pipelines using Terraform, reducing cloud deployment provisioning time from hours to 8 minutes.",
-            "Implemented comprehensive observability dashboards in Grafana & Prometheus, reducing MTTR (Mean Time to Resolution) by 35%.",
-            "Optimized cloud computing costs by 25% through strategic resizing, auto-scaling, and utilizing spot instances."
+            "Provided first and second-line support for on-site and remote users on Windows and Mac, resolving issues swiftly to reduce downtime.",
+            "Managed software licenses and user support for applications like Microsoft O365, Adobe, Zendesk, HubSpot, and PowerBi etc.",
+            "Led the deployment, maintenance, and upgrades of workstations, laptops, printers and peripherals, while managing asset inventory and reporting.",
+            "Efficiently logged and tracked user requests in ticketing systems, ensuring timely resolution for hardware, software, and network issues.",
+            "Streamlined issue escalation process, reducing resolution time for complex network problems by 50%.",
+            "Implemented robust documentation practices, streamlining issue resolution and enhancing system status tracking."
           ]
         },
         {
-          company: "CoreTech Technologies",
-          role: "Senior Backend Developer",
-          date: "Jul 2021 – Jan 2024",
-          location: "Nuremberg, Germany",
-          id: "coretech",
+          company: "Jadoon Technologies",
+          role: "IT Support Engineer",
+          date: "Oct 01, 2020 – Dec 31, 2022",
+          location: "Pakistan · Hybrid",
+          id: "jadoon",
           bullets: [
-            "Built and scaled backend web APIs using Go and FastAPI, handling up to 10k requests per second with sub-50ms latencies.",
-            "Redesigned SQL database schemas and optimized indexing in PostgreSQL, leading to a 45% reduction in search query latency.",
-            "Automated CI/CD workflows using GitHub Actions for seamless testing, security scanning, and deployment of Docker images."
+            "Manage and optimize service performance metrics, significantly enhancing user satisfaction.",
+            "Conducted accurate and efficient data entry, ensuring the integrity and confidentiality of sensitive information.",
+            "Execute timely hardware/software installations and updates using advanced deployment tools.",
+            "Categorizing and prioritizing end user support requests and service requests.",
+            "Perform thorough hardware and software testing, implementing corrections and maintaining detailed records."
           ]
         }
       ],
       education: [
         {
-          institution: "Technical University of Munich",
-          degree: "Bachelor of Science in Informatics",
-          date: "OCT 2017 - OCT 2021",
-          location: "Munich, Germany",
-          highlights: "Specialized in Distributed Systems and Cloud Architectures"
+          institution: "University of Haripur",
+          degree: "Bachelor of Software Engineering",
+          date: "Sep 01, 2016 – Oct 01, 2020",
+          location: "Haripur, Pakistan",
+          highlights: "CGPA: 3.67 / 4.0 | Website: https://www.uoh.edu.pk"
         }
-      ],
-      awards: [
-        { title: "AWS Solutions Architect - Associate", detail: "Certified professional cloud architect", date: "Jun 2023" }
       ],
       languages: [
         { name: "English", level: "C1 — Professional Working Proficiency" },
-        { name: "German", level: "B1 — Intermediate" }
+        { name: "German", level: "A2 — Elementary" }
+      ],
+      certifications: [
+        {
+          name: "Windows 10 and 11 for IT Support: Basic Troubleshooting",
+          issuer: "LinkedIn",
+          date: ""
+        },
+        {
+          name: "Windows 10 for IT Support: Advanced Troubleshooting",
+          issuer: "LinkedIn",
+          date: ""
+        },
+        {
+          name: "Managing IT communications",
+          issuer: "Pluralsight",
+          date: ""
+        },
+        {
+          name: "Introduction to Google Workspace Administration",
+          issuer: "Google Cloud",
+          date: ""
+        }
       ]
     },
     defaultYaml: `# Mohsin's Tailored Infrastructure Overrides
 # Only paste/edit fields you want to override.
 
-target_role: "Senior Backend & Site Reliability Engineer"
+target_role: "IT Support Engineer"
 
-summary: "AWS Certified DevOps specialist and Backend Engineer with 5+ years of experience architecting high-throughput Go microservices and Terraform-driven cloud platforms on AWS. Proficient in scaling Kubernetes infrastructure and implementing real-time Prometheus monitoring."
+summary: "Customer-oriented and technical IT Support Engineer with a strong background in providing on-site and remote technical support for Windows and macOS. Experienced in software licensing and deployment (O365, Adobe, Zendesk, HubSpot, PowerBi), hardware maintenance, and network troubleshooting. Proven track record in optimizing service metrics, streamlining issue resolution processes, and implementing robust documentation practices."
 
-skills_highlight: "Go, Kubernetes, AWS EKS, Terraform, Prometheus, Grafana, PostgreSQL query tuning, GitHub Actions CI/CD."
+skills_highlight: "Zendesk, Service Desk, ServiceNow, TeamViewer, AnyDesk, Windows 10/11, macOS, Networking, Active Directory, O365, Confluence."
 
 tailored_bullets:
-  cloudscale:
-    - "Spearheaded AWS EKS Kubernetes migrations, boosting cluster efficiency and pushing uptime to 99.99%."
-    - "Authored modular Terraform modules to provision full environments, slashing setup times to 8 minutes."
-    - "Set up Prometheus & Grafana alerting setups, reducing mean-time-to-resolution by 35%."
-  coretech:
-    - "Engineered ultra-low latency REST APIs in Go, supporting 10,000 requests per second."
-    - "Optimized critical PostgreSQL queries and indices, accelerating search operations by 45%."
+  ibs:
+    - "Provided first and second-line support for on-site and remote users on Windows and Mac, resolving issues swiftly to reduce downtime."
+    - "Managed software licenses and user support for applications like Microsoft O365, Adobe, Zendesk, HubSpot, and PowerBi etc."
+    - "Led the deployment, maintenance, and upgrades of workstations, laptops, printers and peripherals, while managing asset inventory and reporting."
+    - "Efficiently logged and tracked user requests in ticketing systems, ensuring timely resolution for hardware, software, and network issues."
+    - "Streamlined issue escalation process, reducing resolution time for complex network problems by 50%."
+    - "Implemented robust documentation practices, streamlining issue resolution and enhancing system status tracking."
+  jadoon:
+    - "Manage and optimize service performance metrics, significantly enhancing user satisfaction."
+    - "Conducted accurate and efficient data entry, ensuring the integrity and confidentiality of sensitive information."
+    - "Execute timely hardware/software installations and updates using advanced deployment tools."
+    - "Categorizing and prioritizing end user support requests and service requests."
+    - "Perform thorough hardware and software testing, implementing corrections and maintaining detailed records."
 
 projects:
-  - name: "Automated Cloud Cost Optimizer"
-    description: "Developed a Python-based daemon that analyzes cloud resource consumption trends and automatically schedules scaling or shutoffs, trimming bills by 25%."
+  - name: "Issue Escalation Streamlining"
+    description: "Re-engineered the escalations routing logic between Desktop Support and Network Operations teams, cutting network ticket resolution time in half."
 `
   }
 };
@@ -475,7 +498,7 @@ document.addEventListener("DOMContentLoaded", () => {
         return { ...exp, bullets };
       }),
       education: [...activeBaseCV.education],
-      awards: [...activeBaseCV.awards],
+      awards: [...(activeBaseCV.awards || [])],
       languages: [...activeBaseCV.languages],
       certifications: activeBaseCV.certifications ? [...activeBaseCV.certifications] : []
     };
@@ -495,23 +518,33 @@ document.addEventListener("DOMContentLoaded", () => {
     const showPhoto = photoToggle.checked;
     const profileImgSrc = USER_PROFILES[currentUser].profileImage;
 
+    const contactItems = [];
+    if (merged.contact.phone) {
+      contactItems.push(`<span>${merged.contact.phone}</span>`);
+    }
+    if (merged.contact.email) {
+      contactItems.push(`<a href="mailto:${merged.contact.email}">${merged.contact.email}</a>`);
+    }
+    if (merged.contact.website && merged.contact.websiteUrl) {
+      contactItems.push(`<a href="${merged.contact.websiteUrl}" target="_blank">${merged.contact.website}</a>`);
+    }
+    if (merged.contact.linkedin && merged.contact.linkedinUrl) {
+      contactItems.push(`<a href="${merged.contact.linkedinUrl}" target="_blank">${merged.contact.linkedin}</a>`);
+    }
+    if (merged.contact.github && merged.contact.githubUrl) {
+      contactItems.push(`<a href="${merged.contact.githubUrl}" target="_blank">${merged.contact.github}</a>`);
+    }
+    if (merged.contact.location) {
+      contactItems.push(`<span>${merged.contact.location}</span>`);
+    }
+
     html += `
       <div class="resume-header">
         <div class="header-left">
           <div class="resume-name">${merged.name}</div>
           <div class="resume-title">${merged.title}</div>
           <div class="contact-bar">
-            <span>${merged.contact.phone}</span>
-            <span class="contact-sep">|</span>
-            <a href="mailto:${merged.contact.email}">${merged.contact.email}</a>
-            <span class="contact-sep">|</span>
-            <a href="${merged.contact.websiteUrl}" target="_blank">${merged.contact.website}</a>
-            <span class="contact-sep">|</span>
-            <a href="${merged.contact.linkedinUrl}" target="_blank">${merged.contact.linkedin}</a>
-            <span class="contact-sep">|</span>
-            <a href="${merged.contact.githubUrl}" target="_blank">${merged.contact.github}</a>
-            <span class="contact-sep">|</span>
-            <span>${merged.contact.location}</span>
+            ${contactItems.join('<span class="contact-sep">|</span>')}
           </div>
         </div>
         ${showPhoto ? `
