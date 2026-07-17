@@ -153,12 +153,6 @@ tailored_bullets:
     - "Fine-tuned Meta SAM for product background removal, deployed with an interactive Streamlit interface."
     - "Implemented a full MLOps pipeline on Azure Databricks covering ETL, model training, evaluation, and deployment."
 
-projects:
-  - name: "Custom MCP Server for Internal Inventory Management"
-    description: "Architected and deployed a production-grade Model Context Protocol (MCP) server enabling AI agents to interact with an internal inventory system via structured tool calls. Implemented real-time stock querying, automated reorder triggers, and multi-warehouse sync using Python, FastAPI, and PostgreSQL — reducing manual inventory overhead by 70% and enabling natural-language inventory queries through LLM-powered interfaces."
-  - name: "Customer Support & Social Media Automation using AI"
-    description: "Engineered end-to-end AI automation pipelines for customer support and social media operations, integrating LLM-powered agents with multi-channel platforms (email, chat, Instagram, WhatsApp). Automated ticket triage, sentiment-aware responses, and scheduled content publishing — achieving 85%+ ticket deflection and cutting manual social media effort by 60% across multiple brands."
-
 certifications:
   - name: "Microsoft Certified: Azure AI Apps and Agents Developer Associate"
     issuer: "Microsoft"

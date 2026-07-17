@@ -96,18 +96,3 @@ tailored_bullets:
 # Projects section only appears if this field is present and non-empty.
 # Each project needs a 'name' and 'description'. Keep description to 1-2 sentences.
 
-projects:
-  - name: "Agentic Resume Tailoring Engine"
-    description: >
-      Built a reactive, YAML-driven resume generator that dynamically merges base CV data
-      with job-tailored bullet points, generating ATS-optimized PDFs in real time.
-
-  - name: "Multi-Modal AI Customer Support System"
-    description: >
-      Designed and deployed an end-to-end agentic support system handling text, email, and
-      social media tickets in 5 languages using LangGraph, RAG, and PII masking.
-
-  - name: "Real-Time Audio Sales Agent"
-    description: >
-      Built an interactive voice agent with sub-second latency using OpenAI Whisper + TTS,
-      enabling fluid human-like sales conversations with product knowledge retrieval.
