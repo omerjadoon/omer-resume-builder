@@ -402,6 +402,121 @@ projects:
   - name: "Issue Escalation Streamlining"
     description: "Re-engineered the escalations routing logic between Desktop Support and Network Operations teams, cutting network ticket resolution time in half."
 `
+  },
+  ahsan: {
+    role: "user",
+    profileImage: "assets/ahsan.jpg",
+    baseData: {
+      name: "Ahsan Irshad Jadoon",
+      title: "IT Support & Operational Engineer",
+      contact: {
+        phone: "+923144030240",
+        email: "cuahsan1@gmail.com",
+        linkedin: "linkedin.com/in/ahsan-irshad-jadoon",
+        linkedinUrl: "https://www.linkedin.com/in/ahsan-irshad-jadoon/",
+        location: "Pakistan"
+      },
+      summary: "Results-driven IT Support & Operational Engineer with hands-on experience in on-site IT support, Windows deployment, hardware configuration, and ITSM processes. Skilled in ServiceNow ticket handling, root cause analysis, virtualization (VMware, Hyper-V), networking (TCP/IP, VPN, Firewalls), and scripting (PowerShell, Bash). Adept at collaborating cross-functionally to plan, install, and support IT infrastructure.",
+      skills: [
+        { category: "Operating Systems", items: "Windows, Linux" },
+        { category: "ITSM & Ticketing", items: "ServiceNow, Jira, Slack, Remote Desktop Protocol, ITIL Framework" },
+        { category: "Deployment & Virtualization", items: "Windows Deployment Service, VMWare, Microsoft Hyper-V, BIOS/UEFI Management" },
+        { category: "Networking & Security", items: "TCP/IP, Firewalls, VPN, IDS" },
+        { category: "Monitoring & Tools", items: "SolarWinds, Acronics, Nagios" },
+        { category: "Scripting & Development", items: "PowerShell, Bash, C/C++" },
+        { category: "Productivity", items: "MS Office" }
+      ],
+      experience: [
+        {
+          company: "Jadoon Technologies (Pvt) Limited",
+          role: "IT Support and Operational Engineer",
+          date: "Jul 15, 2019 – Oct 01, 2021",
+          location: "Pakistan",
+          id: "jadoon_tech",
+          bullets: [
+            "Set up, maintained, and troubleshot IT devices on site; handled tickets with ServiceNow and implemented all procedures on incidents.",
+            "Re-imaged Windows devices and managed ordering and configuration of IT hardware.",
+            "Maintained inventory including re-marketing, defective devices, and new installations.",
+            "Analyzed root causes, documented findings, and recommended preventive changes.",
+            "Installed and administered clients in the Windows environment; collaborated with multiple teams for equipment installation and support.",
+            "Applied basic knowledge of virtualization tools (VMware, Microsoft Hyper-V) and ITIL processes."
+          ]
+        },
+        {
+          company: "Green Decorators Private Limited",
+          role: "IT Support Engineer",
+          date: "Oct 15, 2014 – Aug 01, 2017",
+          location: "Pakistan",
+          id: "green_decorators",
+          bullets: [
+            "Provided first-line technical support via phone, email, and in person, resolving hardware and software issues.",
+            "Installed and configured operating systems and software for compatibility and performance.",
+            "Diagnosed and repaired hardware and peripheral problems.",
+            "Assisted in server management, backups, updates, and security operations.",
+            "Collaborated to upgrade and expand network infrastructure.",
+            "Contributed to IT documentation and the internal knowledge base."
+          ]
+        }
+      ],
+      education: [
+        {
+          institution: "University of Peshawar",
+          degree: "Master of Science in Electronics",
+          date: "Oct 01, 2008 – Oct 01, 2011",
+          location: "Peshawar, Pakistan",
+          highlights: "Final year project and thesis in Masters"
+        },
+        {
+          institution: "Hazara University, Mansehra",
+          degree: "Bachelor of Science in Electronics",
+          date: "Oct 01, 2006 – Oct 01, 2008",
+          location: "Mansehra, Pakistan",
+          highlights: ""
+        }
+      ],
+      awards: [],
+      languages: [
+        { name: "English", level: "B2" },
+        { name: "Urdu", level: "Native" },
+        { name: "Punjabi", level: "Native" }
+      ],
+      certifications: [],
+      projects: [
+        {
+          name: "Duplex Optical Communication and Mini Exchange System",
+          description: "Final year thesis project focused on the design and implementation of a duplex optical communication link and a miniature telephone exchange system."
+        }
+      ]
+    },
+    defaultYaml: `# Ahsan's Job-Tailored Customizations
+# Only paste/edit fields you want to override.
+#
+# Company ID Reference:
+#   jadoon_tech       → Jadoon Technologies (Jul 2019 – Oct 2021)
+#   green_decorators  → Green Decorators (Oct 2014 – Aug 2017)
+
+target_role: "IT Support & Operational Engineer"
+
+summary: "Results-driven IT Support & Operational Engineer with hands-on experience in on-site IT support, Windows deployment, hardware configuration, and ITSM processes. Skilled in ServiceNow ticket handling, root cause analysis, virtualization (VMware, Hyper-V), networking (TCP/IP, VPN, Firewalls), and scripting (PowerShell, Bash)."
+
+skills_highlight: "ServiceNow, Windows Deployment Service, VMWare, TCP/IP, Firewalls, VPN, PowerShell, Bash, SolarWinds, Nagios, ITIL Framework, Microsoft Hyper-V, BIOS/UEFI Management."
+
+tailored_bullets:
+  jadoon_tech:
+    - "Set up, maintained, and troubleshot IT devices on site; handled tickets with ServiceNow and enforced ITIL incident procedures."
+    - "Re-imaged Windows devices and managed ordering and configuration of IT hardware; maintained full asset inventory."
+    - "Analyzed root causes, documented findings, and recommended preventive changes to reduce recurrence."
+    - "Installed and administered Windows client environments; coordinated cross-team equipment installation and support."
+    - "Applied virtualization tools (VMware, Microsoft Hyper-V) and followed ITIL process standards."
+  green_decorators:
+    - "Delivered first-line technical support via phone, email, and in person, resolving hardware and software issues efficiently."
+    - "Installed and configured OS and applications ensuring compatibility and optimal performance."
+    - "Assisted in server management, backups, security updates, and network infrastructure expansion."
+
+projects:
+  - name: "Duplex Optical Communication and Mini Exchange System"
+    description: "Final year thesis project focused on the design and implementation of a duplex optical communication link and a miniature telephone exchange system."
+`
   }
 };
 
@@ -1125,7 +1240,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const canvas = document.createElement('canvas');
         let w = img.width, h = img.height;
         if (w > h) { if (w > maxDim) { h = Math.round(h * maxDim / w); w = maxDim; } }
-        else        { if (h > maxDim) { w = Math.round(w * maxDim / h); h = maxDim; } }
+        else { if (h > maxDim) { w = Math.round(w * maxDim / h); h = maxDim; } }
         canvas.width = w; canvas.height = h;
         canvas.getContext('2d').drawImage(img, 0, 0, w, h);
         resolve(canvas.toDataURL('image/jpeg', quality));
@@ -1140,7 +1255,7 @@ document.addEventListener("DOMContentLoaded", () => {
       try {
         const dataUri = await compressImageToDataUri(imgEl.src);
         resumeHtml = resumeHtml.replace(/src="[^"]*"/, `src="${dataUri}"`);
-      } catch (_) {}
+      } catch (_) { }
     }
 
     const printOverrides = `
