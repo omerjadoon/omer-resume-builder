@@ -19,7 +19,7 @@ const USER_PROFILES = {
         githubUrl: "https://github.com/omerjadoon",
         location: "Munich, Germany"
       },
-      summary: "Results-driven Machine Learning Engineer with 4+ years of experience in artificial intelligence, data science, machine learning, NLP and MLOps. Proficient in Python, ML/DL, LLM Frameworks and Cloud Deployments.",
+      summary: "Results-driven Machine Learning Engineer with 5+ years of experience in artificial intelligence, data science, machine learning, NLP and MLOps. Proficient in Python, ML/DL, LLM Frameworks and Cloud Deployments.",
       skills: [
         { category: "Programming Languages", items: "Python, JavaScript, TypeScript, SQL, C / C++, Java, C#" },
         { category: "Generative AI & LLM Orchestration", items: "Agentic AI, LangGraph, CrewAI, LangChain, LlamaIndex, LLMs (Llama, Mistral, GPT-4, Claude, Gemini), Multimodal LLMs, Audio/Video Models, RAG Pipelines, Vector Embeddings, Fine-Tuning (LoRA/QLoRA), Prompt Engineering, Knowledge Graphs, LLM Evaluation (DeepEval, LangSmith)" },
@@ -43,16 +43,7 @@ const USER_PROFILES = {
             "Developed a modern interactive AI sales agent for Purmeo, integrating text and audio input/output to support real-time customer engagement."
           ]
         },
-        {
-          company: "Siemens",
-          role: "Master Thesis Project",
-          date: "Jun 2025 – Dec 2025",
-          location: "Amberg, Germany · Hybrid",
-          id: "siemens_thesis",
-          bullets: [
-            "Master's Thesis: Development of an Anomaly Detection Algorithm for Classifying the Unknown-Unknown Paradigm."
-          ]
-        },
+
         {
           company: "amidiro",
           role: "Generative AI & Machine Learning Engineer",
@@ -130,23 +121,13 @@ const USER_PROFILES = {
           url: "https://learn.microsoft.com/api/credentials/share/en-us/omerkhanjadoon/195FA913B491DBB2?sharingId"
         }
       ],
-      projects: [
-        {
-          name: "Custom MCP Server for Internal Inventory Management",
-          description: "Architected and deployed a production-grade Model Context Protocol (MCP) server enabling AI agents to interact with an internal inventory system via structured tool calls. Implemented real-time stock querying, automated reorder triggers, and multi-warehouse sync using Python, FastAPI, and PostgreSQL — reducing manual inventory overhead by 70% and enabling natural-language inventory queries through LLM-powered interfaces."
-        },
-        {
-          name: "Customer Support & Social Media Automation using AI",
-          description: "Engineered end-to-end AI automation pipelines for customer support and social media operations, integrating LLM-powered agents with multi-channel platforms (email, chat, Instagram, WhatsApp). Automated ticket triage, sentiment-aware responses, and scheduled content publishing — achieving 85%+ ticket deflection and cutting manual social media effort by 60% across multiple brands."
-        }
-      ]
+      projects: []
     },
     defaultYaml: `# Tailor Your Resume Here to Match the Job Description!
 # Only paste the fields you want to override.
 #
 # Company ID Reference:
 #   sana_expert     → SanaExpert GmbH (Jan 2025 – Present)
-#   siemens_thesis  → Siemens Master Thesis (Jun 2025 – Dec 2025)
 #   amidiro         → amidiro (Dec 2023 – Nov 2024)
 #   remote_native   → Remote Native GmbH (Apr 2023 – Oct 2023)
 #   jtpl_senior     → Jadoon Technologies – Senior Full Stack (Nov 2021 – Dec 2022)
@@ -154,7 +135,7 @@ const USER_PROFILES = {
 
 target_role: "Machine Learning Engineer | Agentic AI Specialist"
 
-summary: "Results-driven Machine Learning Engineer with 4+ years of experience in artificial intelligence, LLM frameworks, MLOps, and agentic workflows. Proven track record of designing and deploying state-of-the-art LLM pipelines and RAG systems that automate complex business processes and increase efficiency by 80%."
+summary: "Results-driven Machine Learning Engineer with 5+ years of experience in artificial intelligence, LLM frameworks, MLOps, and agentic workflows. Proven track record of designing and deploying state-of-the-art LLM pipelines and RAG systems that automate complex business processes and increase efficiency by 80%."
 
 skills_highlight: "LangGraph, CrewAI, LlamaIndex, fine-tuning LLaMA, vector embeddings, MLOps (MLflow, Airflow, Meltano), MinIO, FiftyOne, Metabase."
 

@@ -20,7 +20,7 @@ target_role: "Machine Learning Engineer | Agentic AI Specialist"
 # the job description, then a strong quantified achievement.
 # TIP: Mirror keywords EXACTLY as they appear in the job posting.
 summary: >
-  Results-driven Machine Learning Engineer with 4+ years of experience
+  Results-driven Machine Learning Engineer with 5+ years of experience
   in agentic AI systems, LLM orchestration, and MLOps. Proven track record
   of designing and deploying state-of-the-art LLM pipelines and multi-agent
   RAG systems that automate complex business processes and reduce operational
@@ -44,7 +44,6 @@ skills_highlight: >
 #
 # Company ID Reference:
 #   sana_expert     → SanaExpert GmbH (Jan 2025 – Present)
-#   siemens_thesis  → Siemens Master Thesis (Jun 2025 – Dec 2025)
 #   amidiro         → amidiro (Dec 2023 – Nov 2024)
 #   remote_native   → Remote Native GmbH (Apr 2023 – Oct 2023)
 #   jtpl_senior     → Jadoon Technologies – Senior Full Stack (Nov 2021 – Dec 2022)
