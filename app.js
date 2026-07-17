@@ -408,7 +408,7 @@ projects:
     profileImage: "assets/ahsan.jpg",
     baseData: {
       name: "Ahsan Irshad Jadoon",
-      title: "IT Support & Operational Engineer",
+      title: "Computer Operator",
       contact: {
         phone: "+923144030240",
         email: "cuahsan1@gmail.com",
@@ -416,45 +416,45 @@ projects:
         linkedinUrl: "https://www.linkedin.com/in/ahsan-irshad-jadoon/",
         location: "Pakistan"
       },
-      summary: "Results-driven IT Support & Operational Engineer with hands-on experience in on-site IT support, Windows deployment, hardware configuration, and ITSM processes. Skilled in ServiceNow ticket handling, root cause analysis, virtualization (VMware, Hyper-V), networking (TCP/IP, VPN, Firewalls), and scripting (PowerShell, Bash). Adept at collaborating cross-functionally to plan, install, and support IT infrastructure.",
+      summary: "Detail-oriented and reliable Computer Operator with solid experience in data entry, document processing, and day-to-day computer operations. Proficient in Microsoft Office Suite (Word, Excel, PowerPoint, Outlook), internet research, and basic IT troubleshooting. Known for accuracy, efficiency, and the ability to manage multiple administrative tasks in fast-paced environments.",
       skills: [
-        { category: "Operating Systems", items: "Windows, Linux" },
-        { category: "ITSM & Ticketing", items: "ServiceNow, Jira, Slack, Remote Desktop Protocol, ITIL Framework" },
-        { category: "Deployment & Virtualization", items: "Windows Deployment Service, VMWare, Microsoft Hyper-V, BIOS/UEFI Management" },
-        { category: "Networking & Security", items: "TCP/IP, Firewalls, VPN, IDS" },
-        { category: "Monitoring & Tools", items: "SolarWinds, Acronics, Nagios" },
-        { category: "Scripting & Development", items: "PowerShell, Bash, C/C++" },
-        { category: "Productivity", items: "MS Office" }
+        { category: "Microsoft Office Suite", items: "MS Word, MS Excel, MS PowerPoint, MS Outlook, MS Access" },
+        { category: "Data Entry & Processing", items: "Data Entry, Data Verification, Document Management, Record Keeping, Report Generation" },
+        { category: "Operating Systems", items: "Windows 10/11, Windows 7" },
+        { category: "Internet & Communication", items: "Email Communication (Outlook, Gmail), Internet Research, Online Forms, Video Conferencing (Zoom, Teams)" },
+        { category: "Office Administration", items: "Filing Systems, Inventory Management, Office Equipment Maintenance, Document Scanning & Printing" },
+        { category: "Basic IT Skills", items: "Hardware Troubleshooting, Printer Setup, Network Connectivity, Software Installation" },
+        { category: "Soft Skills", items: "Attention to Detail, Time Management, Accuracy, Communication, Teamwork" }
       ],
       experience: [
         {
           company: "Jadoon Technologies (Pvt) Limited",
-          role: "IT Support and Operational Engineer",
+          role: "Computer Operator",
           date: "Jul 15, 2019 – Oct 01, 2021",
           location: "Pakistan",
           id: "jadoon_tech",
           bullets: [
-            "Set up, maintained, and troubleshot IT devices on site; handled tickets with ServiceNow and implemented all procedures on incidents.",
-            "Re-imaged Windows devices and managed ordering and configuration of IT hardware.",
-            "Maintained inventory including re-marketing, defective devices, and new installations.",
-            "Analyzed root causes, documented findings, and recommended preventive changes.",
-            "Installed and administered clients in the Windows environment; collaborated with multiple teams for equipment installation and support.",
-            "Applied basic knowledge of virtualization tools (VMware, Microsoft Hyper-V) and ITIL processes."
+            "Performed daily data entry and document processing tasks using Microsoft Word, Excel, and Outlook with high accuracy.",
+            "Managed digital and physical filing systems, ensuring records were organized, updated, and easily retrievable.",
+            "Generated routine reports, maintained spreadsheets, and prepared correspondence for internal and external stakeholders.",
+            "Operated and maintained office equipment including printers, scanners, and photocopiers; resolved basic hardware issues.",
+            "Assisted in inventory tracking by maintaining up-to-date logs of equipment and supplies.",
+            "Coordinated with multiple departments to collect, verify, and input operational data into company systems."
           ]
         },
         {
           company: "Green Decorators Private Limited",
-          role: "IT Support Engineer",
+          role: "Computer Operator",
           date: "Oct 15, 2014 – Aug 01, 2017",
           location: "Pakistan",
           id: "green_decorators",
           bullets: [
-            "Provided first-line technical support via phone, email, and in person, resolving hardware and software issues.",
-            "Installed and configured operating systems and software for compatibility and performance.",
-            "Diagnosed and repaired hardware and peripheral problems.",
-            "Assisted in server management, backups, updates, and security operations.",
-            "Collaborated to upgrade and expand network infrastructure.",
-            "Contributed to IT documentation and the internal knowledge base."
+            "Operated computers and office systems to input, process, and retrieve data accurately and efficiently.",
+            "Prepared and formatted documents, presentations, and reports using Microsoft Office Suite.",
+            "Handled incoming and outgoing email correspondence and maintained organized digital archives.",
+            "Managed printing, scanning, and photocopying tasks; ensured timely distribution of documents.",
+            "Supported administrative staff with data verification, form filling, and record updates.",
+            "Maintained basic IT operations including software updates and troubleshooting connectivity issues."
           ]
         }
       ],
@@ -480,7 +480,28 @@ projects:
         { name: "Urdu", level: "Native" },
         { name: "Punjabi", level: "Native" }
       ],
-      certifications: [],
+      certifications: [
+        {
+          name: "Microsoft Office Specialist (MOS) — Microsoft Word",
+          issuer: "Microsoft",
+          date: ""
+        },
+        {
+          name: "Microsoft Office Specialist (MOS) — Microsoft Excel",
+          issuer: "Microsoft",
+          date: ""
+        },
+        {
+          name: "Microsoft Office Specialist (MOS) — Microsoft PowerPoint",
+          issuer: "Microsoft",
+          date: ""
+        },
+        {
+          name: "Computer Operator Certificate",
+          issuer: "National Vocational & Technical Training Commission (NAVTTC)",
+          date: ""
+        }
+      ],
       projects: [
         {
           name: "Duplex Optical Communication and Mini Exchange System",
@@ -495,23 +516,23 @@ projects:
 #   jadoon_tech       → Jadoon Technologies (Jul 2019 – Oct 2021)
 #   green_decorators  → Green Decorators (Oct 2014 – Aug 2017)
 
-target_role: "IT Support & Operational Engineer"
+target_role: "Computer Operator"
 
-summary: "Results-driven IT Support & Operational Engineer with hands-on experience in on-site IT support, Windows deployment, hardware configuration, and ITSM processes. Skilled in ServiceNow ticket handling, root cause analysis, virtualization (VMware, Hyper-V), networking (TCP/IP, VPN, Firewalls), and scripting (PowerShell, Bash)."
+summary: "Detail-oriented and reliable Computer Operator with solid experience in data entry, document processing, and day-to-day computer operations. Proficient in Microsoft Office Suite (Word, Excel, PowerPoint, Outlook), internet research, and basic IT troubleshooting. Known for accuracy, efficiency, and the ability to manage multiple administrative tasks in fast-paced environments."
 
-skills_highlight: "ServiceNow, Windows Deployment Service, VMWare, TCP/IP, Firewalls, VPN, PowerShell, Bash, SolarWinds, Nagios, ITIL Framework, Microsoft Hyper-V, BIOS/UEFI Management."
+skills_highlight: "MS Word, MS Excel, MS PowerPoint, MS Outlook, MS Access, Data Entry, Document Management, Record Keeping, Report Generation, Windows 10/11, Email Communication, Office Equipment Maintenance."
 
 tailored_bullets:
   jadoon_tech:
-    - "Set up, maintained, and troubleshot IT devices on site; handled tickets with ServiceNow and enforced ITIL incident procedures."
-    - "Re-imaged Windows devices and managed ordering and configuration of IT hardware; maintained full asset inventory."
-    - "Analyzed root causes, documented findings, and recommended preventive changes to reduce recurrence."
-    - "Installed and administered Windows client environments; coordinated cross-team equipment installation and support."
-    - "Applied virtualization tools (VMware, Microsoft Hyper-V) and followed ITIL process standards."
+    - "Performed daily data entry and document processing tasks using Microsoft Word, Excel, and Outlook with high accuracy."
+    - "Managed digital and physical filing systems, ensuring records were organized, updated, and easily retrievable."
+    - "Generated routine reports, maintained spreadsheets, and prepared correspondence for internal and external stakeholders."
+    - "Assisted in inventory tracking by maintaining up-to-date logs of equipment and supplies."
+    - "Coordinated with multiple departments to collect, verify, and input operational data into company systems."
   green_decorators:
-    - "Delivered first-line technical support via phone, email, and in person, resolving hardware and software issues efficiently."
-    - "Installed and configured OS and applications ensuring compatibility and optimal performance."
-    - "Assisted in server management, backups, security updates, and network infrastructure expansion."
+    - "Operated computers and office systems to input, process, and retrieve data accurately and efficiently."
+    - "Prepared and formatted documents, presentations, and reports using Microsoft Office Suite."
+    - "Handled incoming and outgoing email correspondence and maintained organized digital archives."
 
 projects:
   - name: "Duplex Optical Communication and Mini Exchange System"
