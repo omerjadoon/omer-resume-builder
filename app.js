@@ -113,6 +113,14 @@ const USER_PROFILES = {
       ],
       certifications: [
         {
+          name: "AWS Certified AI Practitioner",
+          issuer: "Amazon Web Services (AWS)",
+          date: "Aug 2026",
+          expiration: "Aug 2029",
+          credentialId: "ea439b97-25de-4b0f-b1c3-ddecf0fbe1df",
+          url: "https://www.credly.com/badges/ea439b97-25de-4b0f-b1c3-ddecf0fbe1df/"
+        },
+        {
           name: "Microsoft Certified: Azure AI Apps and Agents Developer Associate",
           issuer: "Microsoft",
           date: "June 2026",
@@ -154,6 +162,12 @@ tailored_bullets:
     - "Implemented a full MLOps pipeline on Azure Databricks covering ETL, model training, evaluation, and deployment."
 
 certifications:
+  - name: "AWS Certified AI Practitioner"
+    issuer: "Amazon Web Services (AWS)"
+    date: "Aug 2026"
+    expiration: "Aug 2029"
+    credentialId: "ea439b97-25de-4b0f-b1c3-ddecf0fbe1df"
+    url: "https://www.credly.com/badges/ea439b97-25de-4b0f-b1c3-ddecf0fbe1df/"
   - name: "Microsoft Certified: Azure AI Apps and Agents Developer Associate"
     issuer: "Microsoft"
     date: "June 2026"
